@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>诺贝尔奖是怎样运转的 · 诺贝尔其人、颁奖机构、基金会与那笔一百多年的钱｜How the Nobel Prize works</title>
+<meta name="description" content="诺贝尔是哪样的人？谁在颁奖？诺贝尔基金会管什么？为什么一百多年了还发得出奖金？——1900 年成立、1946 年免税、1950 年代起被允许投资股票、目标通胀后年化 3%、2025 年末本金 67.44 亿克朗而同年支出 1.481 亿。全部数字与引文取自 nobelprize.org 官方页面与《诺贝尔基金会 2025 年报》。">
+<meta name="theme-color" content="#00263e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2300263e'/%3E%3Ccircle cx='16' cy='16' r='6.4' fill='%23cea152'/%3E%3Ccircle cx='16' cy='16' r='10.6' fill='none' stroke='%23cea152' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+
+  /* ── 设计令牌：取自诺贝尔奖官网样式表本身（--nobel-gold / --berlin-blue / --dune / --jumbo / --lochMara / --very-light-grey） ── */
+  :root{
+    --navy:#00263e;          /* berlin-blue */
+    --navy-soft:#0b3a58;
+    --gold:#cea152;          /* nobel-gold-500 */
+    --gold-deep:#8e6518;     /* roti —— 金色系里对比度够正文用的一档 */
+    --blue:#2370b8;          /* lochMara —— 「光」的颜色 */
+    --ink:#2e2a25;           /* dune */
+    --ink-2:#5d5b58;         /* jumbo */
+    --ink-3:#6b6762;
+    --paper:#ffffff;
+    --paper-2:#f4f2f0;
+    --paper-3:#faf9f7;
+    --line:#e0ddd9;
+    --line-2:#efece8;
+    --radius:4px;
+    --radius-lg:6px;
+    --maxw:1120px;
+    --font-serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Songti SC","Noto Serif SC","Source Han Serif SC",serif;
+    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    --font-mono:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-sans);
+    font-size:16px; line-height:1.8; letter-spacing:.006em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+  a{color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(35,112,184,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+  .en{font-family:var(--font-serif); color:var(--ink-2)}
+  code{font-family:var(--font-mono); font-size:.86em; word-break:break-all}
+
+  /* ── 进度条 ── */
+  #progress{position:fixed; top:0; left:0; height:2px; width:0; background:var(--gold); z-index:60; transition:width .08s linear}
+
+  /* ── 导航 ── */
+  nav.top{position:sticky; top:0; z-index:50; background:var(--navy); color:#fff; border-bottom:1px solid rgba(255,255,255,.12)}
+  nav.top .inner{max-width:var(--maxw); margin:0 auto; padding:9px 22px; display:flex; align-items:center; gap:16px; justify-content:space-between}
+  nav.top .brand{font-family:var(--font-serif); font-size:16px; font-weight:600; letter-spacing:.01em; color:#fff; white-space:nowrap}
+  nav.top .brand b{color:var(--gold); font-weight:600}
+  nav.top .links{display:flex; gap:2px; flex-wrap:wrap}
+  nav.top .links a{color:rgba(255,255,255,.76); font-size:12.5px; padding:4px 10px; border-radius:var(--radius); border-bottom:none}
+  nav.top .links a:hover{color:#fff; background:rgba(255,255,255,.12)}
+  @media (max-width:720px){ nav.top .links{display:none} }
+
+  /* ── hero ── */
+  header.hero{background:var(--navy); color:#fff; padding:52px 0 46px; position:relative; overflow:hidden}
+  header.hero::after{content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px; border-radius:50%;
+    border:1px solid rgba(206,161,82,.24); box-shadow:0 0 0 60px rgba(206,161,82,.05)}
+  header.hero .wrap{position:relative; z-index:1}
+  .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+  .eyebrow::before{content:""; width:26px; height:1px; background:var(--gold)}
+  h1{font-family:var(--font-serif); font-size:clamp(29px,6vw,50px); line-height:1.2; letter-spacing:-.01em; margin:20px 0 6px; font-weight:600; color:#fff}
+  h1 .sub{display:block; font-size:clamp(15px,3.2vw,21px); color:var(--gold); font-weight:400; margin-top:12px; letter-spacing:.01em}
+  .hero-lede{color:rgba(255,255,255,.86); max-width:44em; margin:18px 0 6px; font-size:15.5px}
+  .hero-lede .en{display:block; color:rgba(255,255,255,.62); font-size:14px; margin-top:8px; font-style:italic}
+  .hero-meta{display:flex; flex-wrap:wrap; gap:8px 24px; margin-top:26px; padding-top:16px; border-top:1px solid rgba(255,255,255,.16); font-size:13px; color:rgba(255,255,255,.7)}
+  .hero-meta b{color:#fff; font-weight:500}
+  .hero-meta .en{color:rgba(255,255,255,.6)}
+
+  /* ── 时间轴 ── */
+  section.tl{padding:38px 0 8px}
+  .sec-label{margin:0 0 20px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+  .sec-label .lab{display:block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep)}
+  .sec-label .zh{display:block; font-size:17px; font-weight:600; letter-spacing:.01em; color:var(--ink); margin-top:4px}
+  .tl-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:0; border-top:2px solid var(--navy)}
+  .tl-node{padding:16px 12px 18px 0; position:relative}
+  .tl-node .bar{position:absolute; top:-2px; left:0; right:12px; height:2px; background:var(--navy)}
+  .tl-node.done .bar{background:var(--gold)}
+  .tl-node .d{font-family:var(--font-mono); font-size:12px; color:var(--ink-3); letter-spacing:.02em}
+  .tl-node .zh{font-size:15px; font-weight:600; margin-top:3px; color:var(--ink)}
+  .tl-node .en{font-family:var(--font-serif); font-size:12.5px; color:var(--ink-3); line-height:1.4}
+  .tl-node .st{font-size:11.5px; color:var(--ink-3); margin-top:5px}
+  .tl-node.done .st{color:var(--gold-deep)}
+  .tl-node.today .zh{color:var(--navy)}
+  .tl-node.today .st{color:var(--blue); font-weight:600}
+  @media (max-width:720px){
+    .tl-grid{grid-template-columns:1fr; border-top:none}
+    .tl-node{padding:0 0 14px 20px; border-left:2px solid var(--line-2)}
+    .tl-node .bar{display:none}
+    .tl-node.done{border-left-color:var(--gold)}
+    .tl-node .d,.tl-node .zh,.tl-node .en,.tl-node .st{display:inline-block; margin-right:8px}
+    .tl-node .zh{margin-top:0}
+  }
+
+  /* ── 说明块 ── */
+  .notice{background:var(--paper-3); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:var(--radius); padding:18px 20px; margin:18px 0 40px}
+  .notice p{margin:0 0 10px; font-size:14.6px; color:var(--ink-2)}
+  .notice p:last-child{margin-bottom:0}
+  .notice b{color:var(--ink)}
+  .notice .en{display:block; font-size:13.6px; color:var(--ink-3); margin-top:6px; font-style:italic; border-left:2px solid var(--line-2); padding-left:10px}
+
+  /* ── 奖卡 ── */
+  article.prize{border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--paper); margin-bottom:34px; overflow:hidden}
+  article.prize > .top{padding:26px 26px 24px; background:var(--navy); color:#fff; border-bottom:3px solid var(--gold)}
+  .cat{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px}
+  .cat .zh{font-size:13px; font-weight:600; color:var(--navy); background:var(--gold); padding:3px 11px; border-radius:2px; letter-spacing:.04em}
+  .cat .en{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.68)}
+  .cat .date{font-size:12.5px; color:rgba(255,255,255,.62); margin-left:auto}
+  article.prize h2{font-family:var(--font-serif); font-size:clamp(21px,4.4vw,31px); line-height:1.32; margin:18px 0 4px; font-weight:600; letter-spacing:-.005em; color:#fff}
+  article.prize h2 .sub{display:block; font-size:clamp(14px,2.8vw,17px); color:var(--gold); font-style:italic; font-weight:400; margin-top:8px}
+  .cite{margin:20px 0 0; padding:16px 18px; background:rgba(255,255,255,.08); border-left:3px solid var(--gold); border-radius:0 var(--radius) var(--radius) 0}
+  .cite .en{font-size:16px; font-style:italic; color:#fff; line-height:1.7}
+  .cite .zh{font-size:14.5px; color:rgba(255,255,255,.9); margin-top:9px}
+  .cite .tag{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:9px}
+
+  article.prize > .body{padding:26px}
+  h3.sec{margin:0 0 16px; padding-bottom:10px; border-bottom:1px solid var(--line-2)}
+  h3.sec .lab{display:block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-deep)}
+  h3.sec .zh{display:block; font-size:16.5px; letter-spacing:.015em; color:var(--ink); font-weight:600; margin-top:4px}
+  h3.sec:not(:first-child){margin-top:32px}
+  .lead{font-size:16.5px; color:var(--ink); margin:0 0 8px}
+  .lead-en{font-family:var(--font-serif); font-style:italic; font-size:14.8px; color:var(--ink-2); margin:0 0 4px; border-left:2px solid var(--gold); padding-left:12px}
+
+  ol.chain{list-style:none; counter-reset:c; margin:0; padding:0}
+  ol.chain li{counter-increment:c; position:relative; padding:0 0 18px 40px; font-size:15.4px; color:var(--ink-2)}
+  ol.chain li::before{content:counter(c,decimal-leading-zero); position:absolute; left:0; top:3px;
+    font-family:var(--font-mono); font-size:11.5px; font-weight:600; color:var(--gold-deep);
+    border:1px solid var(--gold); border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; background:var(--paper)}
+  ol.chain li::after{content:""; position:absolute; left:13px; top:31px; bottom:3px; width:1px; background:var(--line-2)}
+  ol.chain li:last-child{padding-bottom:0}
+  ol.chain li:last-child::after{display:none}
+  ol.chain b{color:var(--ink); font-weight:600}
+  ol.chain .en-inline{display:block; margin-top:5px; font-family:var(--font-serif); font-style:italic; font-size:13.8px; line-height:1.6; color:var(--ink-3); border-left:2px solid var(--line-2); padding-left:10px}
+
+  .cols{display:grid; grid-template-columns:1.5fr 1fr; gap:34px; align-items:start}
+  @media (max-width:920px){ .cols{grid-template-columns:1fr; gap:26px} }
+
+  .why p{color:var(--ink-2); font-size:15.4px; margin:0 0 12px}
+  .why p:last-child{margin-bottom:0}
+  .why b{color:var(--ink)}
+
+  .people{display:grid; gap:12px}
+  .person{border:1px solid var(--line); border-radius:var(--radius); padding:14px 15px; background:var(--paper-3)}
+  .person .nm{font-size:15.5px; font-weight:700; color:var(--navy); letter-spacing:-.005em}
+  .person .nm .zh{font-weight:500; color:var(--ink-2); font-size:13.5px; margin-left:6px}
+  .person .aff{font-size:13.4px; color:var(--ink-2); margin-top:7px; line-height:1.65}
+  .person .aff .en{font-family:var(--font-serif); font-size:12.8px; color:var(--ink-3); display:block}
+  .person .bio{font-family:var(--font-mono); font-size:11.8px; color:var(--ink-3); margin-top:6px}
+
+  .facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px}
+  .fact{background:var(--paper-2); border-radius:var(--radius); padding:13px 14px; border:1px solid var(--line-2)}
+  .fact .n{font-family:var(--font-serif); font-size:clamp(20px,4.2vw,25px); font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:-.01em}
+  .fact .l{font-size:12.6px; color:var(--ink-2); margin-top:6px; line-height:1.55}
+  .fact .l .en{display:block; font-size:11.6px; color:var(--ink-3); font-style:italic}
+
+  figure{margin:30px 0 0}
+  figure svg{width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2)}
+  ul.figlegend{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:8px 20px; grid-template-columns:repeat(3,1fr)}
+  ul.figlegend.two{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:760px){ ul.figlegend, ul.figlegend.two{grid-template-columns:1fr} }
+  ul.figlegend li{font-size:13.8px; color:var(--ink-2); line-height:1.65; position:relative; padding-left:26px}
+  ul.figlegend li .mk{position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:50%;
+    font-family:var(--font-mono); font-size:10.5px; font-weight:600; display:flex; align-items:center; justify-content:center;
+    background:var(--paper); color:var(--gold-deep); border:1px solid var(--gold)}
+  ul.figlegend li .mk.gold{background:var(--gold); color:#fff; border-color:var(--gold)}
+  ul.figlegend li .mk.blue{background:var(--blue); color:#fff; border-color:var(--blue); border-radius:3px}
+  figcaption{font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7}
+  figcaption .en{display:block; margin-top:5px; font-style:italic; color:var(--ink-3); font-size:13px}
+
+  .srcs{margin-top:24px; padding-top:16px; border-top:1px solid var(--line-2); font-size:13.2px; color:var(--ink-3); line-height:1.95}
+  .srcs .k{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:6px}
+  .srcs a{border-bottom-color:rgba(35,112,184,.3)}
+
+  /* ── 待揭晓 ── */
+  .wait-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(238px,1fr)); gap:16px}
+  .wait{border:1px dashed var(--line); border-radius:var(--radius-lg); padding:20px; background:var(--paper-3)}
+  .wait .cat .zh{background:transparent; color:var(--ink-2); border:1px solid var(--line); padding:2px 9px}
+  .wait .cat .en{color:var(--ink-3)}
+  .wait h2{font-family:var(--font-serif); font-size:20px; color:var(--ink-2); margin:12px 0 2px; font-weight:600}
+  .wait .sub{font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--ink-3)}
+  .wait p{font-size:13.6px; color:var(--ink-3); margin:12px 0 0; line-height:1.7}
+  .wait .stamp{display:inline-block; margin-top:14px; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); border:1px solid var(--line); border-radius:999px; padding:3px 10px}
+
+  footer{margin-top:44px; padding:30px 0 60px; border-top:2px solid var(--navy); color:var(--ink-3); font-size:13px}
+  footer h3{font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); margin:0 0 12px}
+  footer p{margin:0 0 8px; line-height:1.8}
+  footer b{color:var(--ink-2)}
+  footer .en{color:var(--ink-3); font-size:12.4px}
+
+  @media (prefers-reduced-motion: no-preference){
+    .pulse{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.3} 50%{opacity:1}}
+  }
+  @media print{
+    nav.top,#progress{display:none}
+    article.prize{break-inside:avoid; box-shadow:none}
+    header.hero{background:#fff; color:var(--ink)}
+    header.hero h1,header.hero .eyebrow,header.hero .hero-lede,header.hero .hero-meta{color:var(--ink)}
+  }
+
+  /* ══════════ v4 新增：导航 / 目录 / 官方图集 / 影像 / 授权 ══════════ */
+
+  /* 导航（品牌改为链接；窄屏改为可横向滚动，不再直接隐藏） */
+  nav.top .brand{border-bottom:none}
+  nav.top .links a.on{color:#fff; background:rgba(255,255,255,.18)}
+  /* 「三」按钮：桌面隐藏，手机显示 */
+  nav.top .burger{display:none; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+    width:44px; height:44px; margin-left:auto; padding:0; border:0; border-radius:var(--radius);
+    background:transparent; cursor:pointer}
+  nav.top .burger .bg-bar{display:block; width:19px; height:2px; background:#fff; border-radius:2px;
+    transition:transform .18s ease, opacity .18s ease}
+  nav.top .burger[aria-expanded="true"]{background:rgba(255,255,255,.14)}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(2){opacity:0}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* 满屏面板（位置/尺寸照 nobelprize.org 手机端：紧贴顶栏下方，占满剩余全屏，面板内滚动） */
+  .mscrim{position:fixed; inset:0; background:rgba(0,0,0,.42); z-index:48}
+  .mnav{position:fixed; left:0; right:0; top:var(--navh); bottom:0; z-index:49;
+    background:#fff; overflow-y:auto; -webkit-overflow-scrolling:touch;
+    box-shadow:0 18px 40px rgba(0,0,0,.18)}
+  .mnav[hidden]{display:none}
+  .mnav-in{padding:6px 0 22px}
+  .mnav-k{margin:14px 18px 8px; font-size:11px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-3)}
+  .mnav-k .en{font-weight:400; font-style:italic; letter-spacing:0; text-transform:none}
+  a.mhall, .mdet > summary{display:flex; align-items:center; gap:10px; box-sizing:border-box;
+    min-height:56px; padding:14px 18px; font-size:16.5px; font-weight:600; color:var(--ink);
+    border-bottom:1px solid var(--line-2); border-top:none}
+  a.mhall b, .mdet > summary b{font-family:var(--font-mono); font-size:11.6px; font-weight:700;
+    color:var(--gold-deep); min-width:20px}
+  a.mhall .s, .mdet > summary .s{margin-left:auto; font-size:12.4px; font-weight:400;
+    color:var(--ink-3); text-align:right; max-width:46%}
+  a.mhall:active, .mdet > summary:active{background:var(--paper-2)}
+  .mdet > summary{list-style:none; cursor:pointer}
+  .mdet > summary::-webkit-details-marker{display:none}
+  .mdet > summary::after{content:"▾"; margin-left:8px; color:var(--gold-deep); font-size:13px}
+  .mdet[open] > summary::after{content:"▴"}
+  .msub{background:var(--paper-2); border-bottom:1px solid var(--line-2)}
+  .msub a{display:flex; align-items:center; min-height:44px; padding:10px 18px 10px 48px;
+    font-size:14.4px; color:var(--ink-2); border-bottom:1px solid var(--line)}
+  .msub a:last-child{border-bottom:none}
+  .msub a.mhall-top{font-weight:600; color:var(--gold-deep); padding-left:18px}
+  .mnav-ft{margin:16px 18px 0; font-size:12px; color:var(--ink-3); line-height:1.7}
+
+  /* 展线目录：手机端默认折成单行（不换行、不藏内容） */
+  .sm-toggle{display:none; align-items:center; gap:6px; min-height:44px; padding:8px 14px;
+    margin-left:auto; font-size:13.6px; font-weight:600; color:var(--ink);
+    background:var(--paper); border:1px solid var(--line); border-radius:999px; cursor:pointer}
+  .sm-toggle .car{color:var(--gold-deep); font-size:12px}
+  .sm-toggle.on .car{transform:rotate(180deg)}
+
+  @media (max-width:720px){
+    /* 顶栏：单行 68px（logo + 「三」），不再有横向滚动行 */
+    nav.top .inner{flex-direction:row; align-items:center; gap:10px; padding:0 14px; height:68px}
+    nav.top .brand{font-size:15px; text-align:left; white-space:nowrap; overflow:hidden;
+      text-overflow:ellipsis}
+    nav.top .links{display:none}
+    nav.top .burger{display:flex}
+
+    /* 展线目录：单行 + 展开按钮 */
+    .storymap{flex-wrap:nowrap; gap:8px; padding:10px 12px}
+    .storymap .k{flex:0 0 auto}
+    .sm-toggle{display:inline-flex}
+    .sm-list{display:none}
+    .sm-list.open{display:block; width:100%; margin-top:6px}
+    .sm-list.open a{display:flex; align-items:center; gap:8px; min-height:44px; padding:10px 12px;
+      border-radius:var(--radius); background:var(--paper); border:1px solid var(--line);
+      margin-bottom:5px; font-size:14px; color:var(--ink-2)}
+    .sm-list.open a b{font-family:var(--font-mono); font-size:11px; color:var(--gold-deep)}
+  }
+  @media (min-width:721px){
+    .sm-list{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    nav.top .burger .bg-bar{transition:none}
+  }
+
+  /* 目录 */
+  section.toc{background:var(--paper-3); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:22px 24px 24px; margin:26px 0 34px}
+  section.toc .sec-label{border-bottom:none; margin-bottom:8px; padding-bottom:0}
+  .toc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:0 30px}
+  a.toc-item{display:flex; align-items:baseline; gap:11px; padding:11px 0 9px;
+    border-bottom:1px solid var(--line-2); border-radius:0}
+  a.toc-item .n{font-family:var(--font-mono); font-size:11px; font-weight:600; color:var(--gold-deep); flex:none; width:18px}
+  a.toc-item .t{font-size:14.8px; font-weight:600; color:var(--ink); line-height:1.5}
+  a.toc-item .d{font-size:12.2px; color:var(--ink-3); margin-left:auto; text-align:right; white-space:nowrap}
+  a.toc-item:hover .t{color:var(--blue)}
+  .toc-sub{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px 29px}
+  .toc-sub a{font-size:11.8px; color:var(--ink-2); border:1px solid var(--line); background:var(--paper);
+    border-radius:999px; padding:2px 9px; line-height:1.6}
+  .toc-sub a:hover{border-color:var(--blue); color:var(--blue)}
+
+  /* 官方图集 */
+  .figs{display:grid; gap:30px; margin-top:4px}
+  figure.fig{margin:0 !important}
+  figure.fig a{border-bottom:none; display:block}
+  figure.fig img{width:100%; height:auto; display:block; border:1px solid var(--line);
+    border-radius:var(--radius); background:var(--paper-2)}
+  figure.fig.tall img{width:auto; max-width:100%; max-height:74vh; margin:0 auto}
+  figure.fig .meta{margin-top:10px}
+  figure.fig .look{font-size:14.2px; color:var(--ink-2); line-height:1.78}
+  figure.fig .look b{color:var(--navy); font-weight:600}
+  figure.fig .off{font-family:var(--font-serif); font-style:italic; font-size:12.8px;
+    color:var(--ink-3); margin-top:7px; line-height:1.65}
+  figure.fig .cr{font-family:var(--font-mono); font-size:10.8px; color:var(--ink-3);
+    margin-top:6px; line-height:1.5}
+  figure.fig .cr span{border-left:2px solid var(--gold); padding-left:8px}
+
+  /* 进阶图表折叠 */
+  details.adv{margin-top:26px; border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--paper-3); padding:0 18px}
+  details.adv summary{cursor:pointer; padding:15px 0; font-size:14.6px; font-weight:600;
+    color:var(--navy); list-style:none}
+  details.adv summary::-webkit-details-marker{display:none}
+  details.adv summary::before{content:"＋"; font-family:var(--font-mono); color:var(--gold-deep); margin-right:9px}
+  details.adv[open] summary::before{content:"－"}
+  details.adv .inner{padding:0 0 20px}
+
+  /* 得主卡（带官方肖像） */
+  .people{display:grid; gap:12px}
+  .person{border:1px solid var(--line); border-radius:var(--radius); padding:13px;
+    background:var(--paper-3); display:grid; grid-template-columns:74px 1fr; gap:13px; align-items:start}
+  .person .ph{width:74px; height:auto; display:block; border:1px solid var(--line);
+    border-radius:3px; background:var(--paper-2)}
+  .person .pcr{font-family:var(--font-mono); font-size:9.4px; color:var(--ink-3);
+    margin-top:5px; line-height:1.42}
+  .person .nm{margin-top:1px}
+  @media (max-width:420px){ .person{grid-template-columns:62px 1fr; gap:11px}
+    .person .ph{width:62px} }
+
+  /* 官方影像 */
+  .vids{display:grid; gap:10px; margin-top:4px}
+  a.vid{display:grid; grid-template-columns:34px 1fr auto; gap:13px; align-items:center;
+    padding:13px 15px; border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--paper-3)}
+  a.vid .play{width:32px; height:32px; border-radius:50%; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:11px; padding-left:2px}
+  a.vid .t{display:block; font-size:14.4px; font-weight:600; color:var(--ink); line-height:1.5}
+  a.vid .s{display:block; font-size:12.4px; color:var(--ink-3); margin-top:4px; line-height:1.6}
+  a.vid .ext{font-family:var(--font-mono); font-size:10.4px; color:var(--ink-3);
+    letter-spacing:.06em; white-space:nowrap}
+  a.vid:hover{border-color:var(--blue); background:var(--paper)}
+  a.vid:hover .t{color:var(--blue)}
+  @media (max-width:520px){ a.vid{grid-template-columns:30px 1fr}
+    a.vid .ext{grid-column:2; margin-top:4px} }
+
+  /* 授权条款 */
+  section.rights{margin-top:46px}
+  .terms{display:grid; gap:16px; margin-top:6px}
+  .term{border-left:3px solid var(--gold); padding:2px 0 2px 15px}
+  .term .tt{font-size:14.6px; font-weight:600; color:var(--navy); margin-bottom:6px}
+  .term .en{font-family:var(--font-serif); font-style:italic; font-size:13.2px;
+    color:var(--ink-2); line-height:1.72}
+  .term .zh{font-size:13.6px; color:var(--ink-2); margin-top:6px; line-height:1.8}
+  .term .zh b{color:var(--ink)}
+
+  /* 回到目录悬浮按钮 */
+  #toTop{position:fixed; right:16px; bottom:16px; z-index:55; width:44px; height:44px;
+    border-radius:50%; background:var(--navy); color:#fff; border:1px solid rgba(255,255,255,.22);
+    display:none; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 6px 22px rgba(0,38,62,.3); font-size:15px; font-family:var(--font-sans)}
+  #toTop.show{display:flex}
+  #toTop:hover{background:var(--navy-soft)}
+
+  section.pending{margin-top:10px}
+  @media print{ #toTop{display:none !important}
+    section.toc{break-inside:avoid} figure.fig{break-inside:avoid} }
+
+  /* ══════════ v4 修正：锚点偏移 / 手机端目录换行 / 关键数字通栏 ══════════ */
+
+  /* 锚点落点停在吸顶导航下方（导航高 50px 桌面 / 87px 手机，实测）
+     —— 不加这条，点目录跳过去标题会被导航盖住 */
+  :root{--navh:64px}
+  section, article.prize, footer, h2, h3, h4, figure, details{
+    scroll-margin-top:calc(var(--navh) + 18px)}
+
+  /* 手机端目录：编号 + 标题一行，右侧说明另起一行，避免中文被挤断 */
+  @media (max-width:560px){
+    a.toc-item{display:grid; grid-template-columns:18px 1fr; gap:3px 11px; align-items:baseline}
+    a.toc-item .t{font-size:14.4px}
+    a.toc-item .d{grid-column:2; margin-left:0; text-align:left; white-space:normal; font-size:12px}
+    .toc-sub{margin-left:29px; gap:5px}
+  }
+
+  /* 关键数字：通栏放在两栏之后（11 组数字是这页的记忆锚点，值得占满一行） */
+  .facts-band{margin-top:30px}
+  .facts-band .facts{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .facts-band .fact .n{font-size:clamp(22px,5vw,30px)}
+  @media (max-width:560px){ .facts-band .facts{grid-template-columns:repeat(2,1fr)} }
+
+  /* 得主卡收紧：医学 3 位得主时卡片总高要与左栏「为什么重要」齐平（实测 695→约 400px） */
+  .person{padding:10px 12px; gap:12px; grid-template-columns:58px 1fr}
+  .person .ph{width:58px}
+  .person .nm{font-size:14.8px}
+  .person .nm .zh{font-size:12.8px; margin-left:5px}
+  .person .aff{font-size:12.7px; margin-top:5px; line-height:1.6}
+  .person .aff .en{font-size:12px}
+  .person .bio{font-size:11.2px; margin-top:5px; line-height:1.5}
+  .person .pcr{font-size:8.8px; margin-top:4px}
+  .people{gap:10px}
+
+  /* 目录条目：奖项名一行（不折行），完整标题另起一行，右侧元信息 */
+  a.toc-item .t{line-height:1.45}
+  a.toc-item .t .st{display:block; font-size:12.6px; font-weight:400; color:var(--ink-3); margin-top:2px}
+  /* 目录里的英文名称：第二层（斜体、小一号、弱色） */
+  a.toc-item .t .en{display:block; font-size:11.8px; font-weight:400; font-style:italic;
+    color:var(--gold-deep); margin-top:3px; letter-spacing:.01em}
+  /* 顶栏链接的英文名：第二层 */
+  /* 顶栏的英文名只在够宽时显示（中部平板宽度会让 6 项换行、把导航撑到 108px） */
+  nav.top .links a .en{display:none; font-size:9.8px; font-weight:400; font-style:italic;
+    color:rgba(255,255,255,.52); letter-spacing:.01em; line-height:1.35}
+  @media (min-width:1080px){ nav.top .links a .en{display:block} }
+  nav.top .links a.on .en{color:rgba(255,255,255,.78)}
+  /* 展线目录：手机端展开后显示官方英文原标题；桌面端胶囊保持紧凑，不显示 */
+  .sm-list a .sm-en{display:none; font-size:11px; font-style:italic; color:var(--ink-3);
+    line-height:1.45; margin-top:1px}
+  @media (max-width:720px){
+    .sm-list.open a{flex-direction:column; align-items:flex-start; gap:2px; min-height:44px}
+    .sm-list.open a .sm-zh{font-weight:600; color:var(--ink); font-size:14.4px}
+    .sm-list.open a .sm-en{display:block}
+  }
+  @media (max-width:560px){ a.toc-item .t .st{font-size:12.2px} }
+
+  /* 得主并排通栏（3 位以上得主的奖）：为何重要占满宽度，得主 3 幅肖像一行 */
+  article.prize .body > h3.sec + .why{max-width:56em}
+  .people.row{display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:12px}
+  .people.row .person{grid-template-columns:58px 1fr}
+  @media (max-width:700px){ .people.row{grid-template-columns:1fr} }
+  /* 肖像署名移到卡片底部通栏，省掉窄列里的多行折行 */
+  .person .pcr{grid-column:1 / -1; margin-top:0; padding-top:6px;
+    border-top:1px solid var(--line-2); font-size:9.6px; line-height:1.4}
+
+  /* 人名与短标签不拆行（中文可在任意字间断行，人名被拆很难看） */
+  .person .nm, .person .nm .zh, .tl-node .zh, .wait h2{word-break:keep-all}
+  .person .nm .zh{white-space:nowrap}
+  @media (max-width:520px){ .person .nm .zh{display:block; margin-left:0; margin-top:2px} }
+
+  /* ── 博物馆层：展线正文（发现的故事）── */
+  .story{max-width:62em; margin-top:20px; counter-reset:chap}
+  .story .chap{position:relative; border-left:2px solid var(--gold); padding:0 0 2px 20px; margin:0 0 30px}
+  .story .chap:before{counter-increment:chap; content:counter(chap,decimal-leading-zero);
+    position:absolute; left:-30px; top:2px; width:22px; text-align:right;
+    font-size:10px; font-weight:700; letter-spacing:.06em; color:var(--gold-deep); font-variant-numeric:tabular-nums}
+  .story .chap h4{margin:0 0 8px}
+  .story .chap h4 .lab{display:block; font-size:9.8px; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--gold-deep); font-weight:700; line-height:1.5}
+  .story .chap h4 .zh{display:block; font-size:17.5px; line-height:1.45; font-weight:700; color:var(--ink)}
+  .story .chap p{margin:0 0 11px; font-size:15.4px; line-height:1.92; color:var(--ink-2)}
+  .story .chap p b{color:var(--ink)}
+  @media (max-width:560px){
+    .story .chap{padding-left:14px; margin-bottom:24px}
+    .story .chap:before{display:none}
+    .story .chap p{font-size:15px; line-height:1.9}
+  }
+
+  /* ── 术语小词典 ── */
+  dl.gloss{margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px}
+  dl.gloss .g{margin:0; background:var(--paper-2); border:1px solid var(--line-2);
+    border-left:3px solid var(--gold); border-radius:var(--radius); padding:12px 14px}
+  dl.gloss dt{font-size:15px; font-weight:700; color:var(--ink); line-height:1.5; margin-bottom:6px}
+  dl.gloss dt .en{display:block; font-size:11.6px; font-style:italic; font-weight:400; color:var(--ink-3); letter-spacing:.01em}
+  dl.gloss dd{margin:0; font-size:14.2px; line-height:1.82; color:var(--ink-2)}
+  dl.gloss dd b{color:var(--ink)}
+  dl.gloss .like{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line);
+    font-size:13.4px; line-height:1.75; color:var(--ink-2)}
+  dl.gloss .like .k{display:inline-block; margin-right:6px; padding:1px 6px; border-radius:2px;
+    background:var(--gold); color:var(--navy); font-size:10.4px; font-weight:700; letter-spacing:.05em; vertical-align:1px}
+
+  /* ── 想想看 ── */
+  ol.think{counter-reset:q; list-style:none; margin:16px 0 0; padding:0; max-width:62em}
+  ol.think li{counter-increment:q; position:relative; padding:11px 14px 11px 44px;
+    border-bottom:1px solid var(--line-2); font-size:15px; line-height:1.85; color:var(--ink-2)}
+  ol.think li b{color:var(--ink)}
+  ol.think li:before{content:"Q" counter(q); position:absolute; left:12px; top:11px;
+    font-family:var(--font-mono); font-size:11.6px; font-weight:700; color:var(--gold-deep)}
+  ol.think li:last-child{border-bottom:0}
+
+  /* ── 展线目录（每座展厅开头的章节导航）── */
+  .storymap{display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+    margin:0 0 22px; padding:10px 12px; background:var(--paper-2);
+    border:1px solid var(--line-2); border-radius:var(--radius)}
+  .storymap .k{font-size:10.6px; font-weight:700; letter-spacing:.12em; color:var(--gold-deep); margin-right:4px}
+  .storymap a{display:inline-flex; align-items:baseline; gap:5px; padding:3px 9px; border-radius:999px;
+    background:var(--paper); border:1px solid var(--line); font-size:12.6px; color:var(--ink-2)}
+  .storymap a b{font-family:var(--font-mono); font-size:10.4px; color:var(--gold-deep)}
+  .storymap a:hover{border-color:var(--gold); color:var(--ink); background:#fff}
+  @media (max-width:700px){
+    /* 手机不靠横向滑动：换成两列自动换行，十个章节一屏看得完，没有内容被藏起来 */
+    .storymap{gap:5px; padding:9px 10px}
+    .storymap .k{flex:0 0 100%; margin:0 0 3px}
+    .storymap a{flex:1 1 auto; min-width:132px; justify-content:flex-start}
+  }
+
+  /* ── 学科地图 ── */
+  .mapsec{margin-top:52px}
+  .mapgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:16px 0 12px}
+  .mapgrid .mcol{background:var(--paper-2); border:1px solid var(--line-2); border-top:3px solid var(--navy);
+    border-radius:var(--radius); padding:14px 16px}
+  .mapgrid .mh{font-size:16px; font-weight:700; color:var(--ink); margin-bottom:8px; line-height:1.4}
+  .mapgrid .mh .en{display:block; font-size:11.4px; font-style:italic; font-weight:400; color:var(--ink-3)}
+  .mapgrid p{margin:0; font-size:14.4px; line-height:1.85; color:var(--ink-2)}
+  .mapgrid p b{color:var(--ink)}
+  p.map-note{max-width:62em; font-size:13.6px; line-height:1.85; color:var(--ink-2);
+    background:rgba(206,161,82,.12); border-left:3px solid var(--gold);
+    padding:10px 14px; border-radius:0 var(--radius) var(--radius) 0}
+
+
+
+  /* ── 本页自有样式（前缀 ab-，不碰主站类名） ── */
+  .ab-hero{background:var(--navy); color:#fff; padding:54px 0 46px; position:relative; overflow:hidden}
+  .ab-hero:before{content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px;
+    border-radius:50%; border:1px solid rgba(206,161,82,.28)}
+  .ab-hero:after{content:""; position:absolute; right:-40px; top:-40px; width:260px; height:260px;
+    border-radius:50%; border:1px solid rgba(206,161,82,.18)}
+  .ab-hero .wrap{position:relative; z-index:1}
+  .ab-hero h1{font-family:var(--font-serif); font-size:clamp(27px,5.6vw,46px); line-height:1.24;
+    margin:14px 0 8px; font-weight:600; color:#fff; letter-spacing:-.01em}
+  .ab-hero h1 .en2{display:block; font-size:clamp(14px,3vw,19px); color:var(--gold); font-weight:400; margin-top:8px; font-style:italic}
+  .ab-hero p{color:rgba(255,255,255,.86); max-width:46em; margin:16px 0 0; font-size:15.4px; line-height:1.85}
+  .ab-hero p.en{display:block; color:rgba(255,255,255,.6); font-size:13.6px; font-style:italic; margin-top:10px}
+  .ab-hero .kicker{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+
+  .ab-sec{padding:44px 0 6px; border-top:1px solid var(--line-2)}
+  .ab-sec > .lead{font-size:15.6px; color:var(--ink-2); line-height:1.9; max-width:48em; margin:0 0 22px}
+  .ab-sec > .lead b{color:var(--ink)}
+  .ab-sec h3.sub{font-family:var(--font-serif); font-size:20px; font-weight:600; color:var(--ink);
+    margin:30px 0 10px; letter-spacing:-.005em}
+  .ab-sec h3.sub span{display:block; font-family:var(--font-mono); font-size:10.6px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold-deep); margin-bottom:5px; font-weight:600}
+
+  .ab-ans{background:var(--paper-3); border:1px solid var(--line); border-left:3px solid var(--gold);
+    border-radius:var(--radius); padding:20px 22px; margin:24px 0 10px}
+  .ab-ans h3.m{font-family:var(--font-serif); font-size:19px; margin:0 0 12px; color:var(--ink); font-weight:600}
+  .ab-ans .conds{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; margin:14px 0 0}
+  .ab-ans .c{background:#fff; border:1px solid var(--line-2); border-radius:var(--radius); padding:13px 15px}
+  .ab-ans .c .k{font-family:var(--font-mono); font-size:11.5px; color:var(--gold-deep); letter-spacing:.1em}
+  .ab-ans .c b{display:block; font-size:14.6px; color:var(--navy); margin:4px 0 6px}
+  .ab-ans .c p{margin:0; font-size:13.4px; line-height:1.75; color:var(--ink-2)}
+  .ab-ans .punch{margin:16px 0 0; padding-top:14px; border-top:1px solid var(--line-2); font-size:14.2px; color:var(--ink-2)}
+  .ab-ans .punch b{color:var(--ink); font-size:15.4px}
+
+  .ab-quote{margin:20px 0; padding:18px 20px; background:var(--paper-2); border-radius:var(--radius)}
+  .ab-quote .q{font-family:var(--font-serif); font-size:15.2px; line-height:1.8; color:var(--ink); margin:0}
+  .ab-quote .zh{font-size:14px; color:var(--ink-2); margin:10px 0 0; line-height:1.8}
+  .ab-quote .src{font-family:var(--font-mono); font-size:11px; color:var(--ink-3); margin-top:10px; letter-spacing:.06em}
+
+  .ab-tbl{width:100%; border-collapse:collapse; margin:16px 0 6px; font-size:14px}
+  .ab-tbl caption{caption-side:top; text-align:left; font-family:var(--font-mono); font-size:10.8px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); padding-bottom:8px}
+  .ab-tbl th, .ab-tbl td{padding:9px 12px 9px 0; border-bottom:1px solid var(--line-2); vertical-align:top; text-align:left}
+  .ab-tbl th{font-size:12.4px; color:var(--ink-3); font-weight:600; white-space:nowrap}
+  .ab-tbl td b{color:var(--navy)}
+  .ab-tbl .en{display:block; font-size:12.2px; color:var(--ink-3); font-style:italic}
+  .ab-tbl tr:last-child td{border-bottom:none}
+  .ab-tbl .econ td{background:rgba(206,161,82,.07)}
+
+  .ab-tl{list-style:none; margin:18px 0 0; padding:0; display:grid}
+  .ab-tl li{display:grid; grid-template-columns:96px 1fr; align-items:start}
+  .ab-tl .y{font-family:var(--font-mono); font-size:12px; color:var(--gold-deep); letter-spacing:.02em;
+    text-align:right; padding:3px 14px 0 0}
+  .ab-tl .c{position:relative; border-left:1px solid var(--line); padding:0 0 22px 16px}
+  .ab-tl .c:before{content:""; position:absolute; left:-4.5px; top:7px; width:8px; height:8px; border-radius:50%;
+    background:var(--gold); box-shadow:0 0 0 3px #fff}
+  .ab-tl li:last-child .c{border-left-color:transparent; padding-bottom:4px}
+  .ab-tl .t{font-size:15px; font-weight:600; color:var(--ink); margin:0}
+  .ab-tl .d{font-size:13.6px; color:var(--ink-2); margin:5px 0 0; line-height:1.78}
+  .ab-tl .o{font-size:11.8px; color:var(--ink-3); font-style:italic; margin:6px 0 0; line-height:1.6}
+  .ab-tl .o:before{content:"官方原文："; font-style:normal; font-family:var(--font-mono); font-size:10.4px;
+    color:var(--gold-deep); letter-spacing:.06em; margin-right:4px}
+
+  .ab-fig{margin:22px 0 0; padding:0}
+  .ab-fig img{width:100%; height:auto; display:block; border-radius:var(--radius); border:1px solid var(--line-2)}
+  .ab-fig .meta{margin-top:9px}
+  .ab-fig .look{font-size:13.4px; color:var(--ink-2)}
+  .ab-fig .look b{color:var(--ink)}
+  .ab-fig .off{font-size:12.2px; color:var(--ink-3); font-style:italic; line-height:1.65; margin-top:5px}
+  .ab-fig .cr{font-size:11.6px; color:var(--ink-3); margin-top:4px; line-height:1.6}
+  .ab-figs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:22px}
+  .ab-figs .ab-fig{margin:0}
+
+  .ab-note{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin:18px 0}
+  .ab-note.warn{border-left:3px solid var(--gold-deep)}
+  .ab-note h4{margin:0 0 8px; font-family:var(--font-serif); font-size:16.4px; color:var(--ink)}
+  .ab-note p{margin:0 0 8px; font-size:14px; color:var(--ink-2); line-height:1.82}
+  .ab-note p:last-child{margin-bottom:0}
+  .ab-note ul{margin:8px 0 0; padding-left:20px; font-size:14px; color:var(--ink-2); line-height:1.85}
+  .ab-note li{margin-bottom:6px}
+
+  /* 图表：横向条，条宽 = 指数（1901 = 100%） */
+  .ab-chart{margin:20px 0 4px}
+  .ab-chart .cap{font-family:var(--font-mono); font-size:10.8px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--gold-deep); margin-bottom:12px}
+  .ab-rows{display:grid; gap:7px}
+  .ab-row{display:grid; grid-template-columns:66px 1fr 62px; gap:10px; align-items:center}
+  .ab-row .y{font-family:var(--font-mono); font-size:12px; color:var(--ink-2); text-align:right}
+  .ab-row .t{position:relative; height:17px; background:var(--paper-2); border-radius:3px; overflow:hidden}
+  .ab-row .f{display:block; height:100%; border-radius:3px 0 0 3px; background:var(--gold-deep)}
+  .ab-row .f.low{background:repeating-linear-gradient(45deg,rgba(142,101,24,.42) 0 5px,rgba(142,101,24,.16) 5px 10px)}
+  .ab-row .f.cap{background:var(--navy-soft)}
+  .ab-row .f.cap.low{background:repeating-linear-gradient(45deg,rgba(11,58,88,.42) 0 5px,rgba(11,58,88,.14) 5px 10px)}
+  .ab-row .b{position:absolute; top:-2px; bottom:-2px; width:0; border-left:1px dashed rgba(93,91,88,.5)}
+  .ab-row .v{font-family:var(--font-mono); font-size:12px; color:var(--ink); text-align:right}
+  .ab-row .v.low{color:var(--ink-3)}
+  .ab-lg{display:flex; flex-wrap:wrap; gap:6px 18px; margin:14px 0 0; font-size:12.4px; color:var(--ink-3)}
+  .ab-lg i{display:inline-block; width:22px; height:10px; border-radius:2px; margin-right:6px; vertical-align:middle}
+  .ab-jump{margin:10px 0 0; font-size:12.6px; color:var(--ink-3)}
+  .ab-jump a{margin-right:14px}
+
+  .ab-card{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin:18px 0 0}
+  .ab-card .c{border:1px solid var(--line-2); border-radius:var(--radius); padding:14px 16px; background:var(--paper-3)}
+  .ab-card .c .n{font-family:var(--font-serif); font-size:24px; color:var(--navy); font-weight:600; line-height:1.15}
+  .ab-card .c .l{font-size:12.6px; color:var(--ink-2); margin-top:5px; line-height:1.55}
+
+  .ab-srcs{margin:22px 0 0; padding:0; list-style:none; font-size:13.4px; color:var(--ink-2); line-height:1.95}
+  .ab-srcs li{padding-left:16px; position:relative; margin-bottom:6px}
+  .ab-srcs li:before{content:"→"; position:absolute; left:0; color:var(--gold-deep)}
+  .ab-srcs code{font-size:.9em}
+
+  .ab-think{counter-reset:t; list-style:none; margin:18px 0 0; padding:0}
+  .ab-think li{counter-increment:t; position:relative; padding:12px 0 12px 42px; border-bottom:1px solid var(--line-2);
+    font-size:14.6px; color:var(--ink-2); line-height:1.85}
+  .ab-think li:last-child{border-bottom:none}
+  .ab-think li:before{content:counter(t,decimal-leading-zero); position:absolute; left:0; top:12px;
+    font-family:var(--font-mono); font-size:12px; color:var(--gold-deep); letter-spacing:.06em}
+
+  footer.ab-ft{margin:40px 0 70px; padding-top:18px; border-top:1px solid var(--line); font-size:12.6px; color:var(--ink-3); line-height:1.85}
+
+  @media (max-width:640px){
+    .ab-tl li{grid-template-columns:64px 1fr}
+    .ab-tl .y{padding-right:10px; font-size:11.4px}
+    .ab-row{grid-template-columns:52px 1fr 54px; gap:8px}
+    .ab-hero{padding:40px 0 34px}
+  }
+
+</style>
+</head>
+<body id="top">
+<div id="progress"></div>
+<nav class="top">
+  <div class="inner">
+    <a class="brand" href="index.html">2026 诺贝尔奖 <b>Nobel Prize</b></a>
+    <div class="links"><a href="index.html#schedule">总览<span class="en">Overview</span></a><a href="index.html#medicine">医学厅<span class="en">Physiology or Medicine</span></a><a href="index.html#physics">物理厅<span class="en">Physics</span></a><a href="index.html#chemistry">化学厅<span class="en">Chemistry</span></a><a href="index.html#literature">文学厅<span class="en">Literature</span></a><a href="index.html#peace">和平厅<span class="en">Peace</span></a><a href="jp.html">日本科学奖<span class="en">Born in Japan</span></a><a href="cn.html">华人科学奖<span class="en">Chinese descent</span></a><a href="about.html" class="on" aria-current="page">诺贝尔与基金会<span class="en">Nobel &amp; the Foundation</span></a><a href="index.html#sources">本馆说明<span class="en">About this page</span></a></div>
+    <button class="burger" type="button" aria-label="打开导航目录" aria-expanded="false" aria-controls="mnav"><span class="bg-bar"></span><span class="bg-bar"></span><span class="bg-bar"></span></button>
+  </div>
+</nav>
+<div class="mscrim" id="mscrim" hidden></div>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="导航" hidden>
+  <div class="mnav-in">
+    <p class="mnav-k">本页目录 <span class="en">On this page</span></p>
+    <a class="mhall" href="#ans">先给答案<span class="s">Why it still works</span></a><a class="mhall" href="#man">诺贝尔其人<span class="s">Alfred Nobel</span></a><a class="mhall" href="#will">一份遗嘱<span class="s">The will</span></a><a class="mhall" href="#who">谁在颁奖<span class="s">Who selects</span></a><a class="mhall" href="#foundation">诺贝尔基金会<span class="s">The Foundation</span></a><a class="mhall" href="#money">钱：一百多年还在发<span class="s">The money</span></a><a class="mhall" href="#chart">124 年一张表<span class="s">1901–2025</span></a><a class="mhall" href="#observe">三件要说清楚的事<span class="s">Caveats</span></a><a class="mhall" href="#think">想想看<span class="s">Think about it</span></a><a class="mhall" href="#srcs">来源<span class="s">Sources</span></a><p class="mnav-k">主站与另两页 <span class="en">The rest of the site</span></p><a class="mhall" href="index.html"><b>00</b>总览<span class="s">Overview</span></a><a class="mhall" href="index.html#medicine"><b>01</b>医学厅<span class="s">Physiology or Medicine</span></a><a class="mhall" href="index.html#physics"><b>02</b>物理厅<span class="s">Physics</span></a><a class="mhall" href="index.html#chemistry"><b>03</b>化学厅<span class="s">Chemistry</span></a><a class="mhall" href="index.html#literature"><b>04</b>文学厅<span class="s">Literature</span></a><a class="mhall" href="index.html#peace"><b>05</b>和平厅<span class="s">Peace</span></a><a class="mhall" href="jp.html"><b>08</b>日本科学奖<span class="s">Born in Japan · 27 laureates</span></a><a class="mhall" href="cn.html"><b>09</b>华人科学奖<span class="s">Chinese descent · 9 laureates</span></a><a class="mhall on" href="about.html" aria-current="page"><b>10</b>诺贝尔与基金会<span class="s">Nobel &amp; the Foundation · 本页</span></a><a class="mhall" href="index.html#sources"><b>11</b>本馆说明<span class="s">About this page</span></a>
+  </div>
+</div>
+
+<header class="ab-hero">
+  <div class="wrap">
+    <span class="kicker">The Nobel Prize · how it works</span>
+    <h1>诺贝尔奖是怎样运转的
+      <span class="en2">One man, one will, four institutions — and a fund that has paid out since 1901</span>
+    </h1>
+    <p>一个人，一份遗嘱，四家机构，和一笔一百多年的钱。这一页写四件事：<b>诺贝尔其人</b>、
+    <b>各奖项的颁发机构</b>、<b>诺贝尔基金会</b>，以及最容易被跳过的那件——<b>这笔钱是怎么运作的，
+    为什么 1901 年到现在还发得出奖金</b>。</p>
+    <p class="en">Every figure and quotation on this page comes from nobelprize.org or the Nobel
+    Foundation’s annual report; where the official record is silent, this page stays silent too.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="facts-band" style="margin:26px 0 6px"><div class="facts"><div class="fact"><div class="n">21 Oct 1833</div><div class="l">生于斯德哥尔摩<span class="en">Born in Stockholm, Sweden</span></div></div><div class="fact"><div class="n">10 Dec 1896</div><div class="l">卒于意大利圣雷莫，63 岁<span class="en">Died in Sanremo, Italy</span></div></div><div class="fact"><div class="n">355</div><div class="l">项专利（官方「Known for」栏）<span class="en">patents held</span></div></div><div class="fact"><div class="n">5</div><div class="l">种语言，17 岁时已能流利使用<span class="en">languages fluently at 17</span></div></div><div class="fact"><div class="n">31 M SEK</div><div class="l">留给奖金的本金（官方：约合今 22 亿克朗）<span class="en">left to fund the prizes</span></div></div><div class="fact"><div class="n">1867</div><div class="l">炸药（dynamite）专利<span class="en">the dynamite patent</span></div></div></div></section>
+  <section class="ab-sec" id="ans">
+  <h2 class="sec-label"><span class="lab">00 · The short answer</span><span class="zh">先给答案：为什么一百多年了还发得出奖金</span></h2>
+  <p class="lead">这个问题有一个不神秘的答案：<b>诺贝尔在遗嘱里把「本金」和「每年能发出去的钱」分开了</b>，
+  然后基金会花了大约九十年，把三件事逐个解决——税、投资限制、以及花钱的纪律。今天它的规则写得很清楚：
+  长期做到通胀后年化 3% 以上的回报，每年花掉的钱只占本金约 2%。</p>
+  <div class="ab-ans">
+    <h3 class="m">五个条件，缺一条都撑不到今天</h3>
+    <div class="conds"><div class="c"><span class="k">①</span><b>遗嘱把本金和收益分开了</b><p>诺贝尔写的是：本金构成一笔「基金」，每年发出去的是<b>这笔基金的利息</b>——不是本金。官方基金会的目标写得也很直白：长期要有足够高的回报，用来维持诺贝尔奖的财务基础、并保证评奖委员会独立工作。</p></div><div class="c"><span class="k">②</span><b>税：从 40% 打到 0</b><p>基金会 1904 年第一次尝试免税，议会没通过。1925 年，<b>全部颁奖机构决定当年不发奖</b>——这被看作抗议，反而赢得同情。1927 年后税负从 40% 降到 3%；1938 年只有 5%，二战后升到 21%；<b>1946 年，基金会拿到免税地位</b>（理由是它应当被视作一个「学会」）。</p></div><div class="c"><span class="k">③</span><b>投资：从只准买国债，到被放手去投资</b><p>遗嘱里的「安全的证券」在 1901 年被理解成国债、房产抵押贷款和公司债——本金因此缩了几十年。1939 年允许买房产；1950 年代初政府放行，董事会「实际上被给了自由的手」去买大部分类型的股票。1980 年代本金二十年翻了四倍；<b>1991 年，本金的实际价值回到 1901 年的水平</b>。</p></div><div class="c"><span class="k">④</span><b>今天的目标写在年报里：通胀后年化 ≥ 3%</b><p>基金会给自己定的目标是<b>扣除通胀后年化至少 3%</b>的长期回报，并认为只要达到这个水平，就能覆盖未来的支出。战略基准是 55% 股票 / 10% 债券 / 10% 房产 / 25% 另类资产；董事会定区间，投资委员会（<b>不领报酬</b>）做战术配置与选管理人。</p></div><div class="c"><span class="k">⑤</span><b>花得比赚得少：这是算术核心</b><p>2025 年，基金会全部支出（奖金 + 评奖委员会报酬 + 诺贝尔周 + 行政）共 <b>1.481 亿克朗</b>，而年末投资资本是 <b>67.44 亿克朗</b>——两个数相除，支出约等于本金的 2.2%（本页据年报数字计算）。只要长期回报稳住 3% 以上，奖金就能一直发下去。</p></div></div>
+    <p class="punch">结果是：1901 年诺贝尔的本金是 31 587 202 克朗；按 2025 年 12 月的币值折算，
+    2025 年末基金会手里的本金是 <b>6 743 994 000 克朗</b>，相当于 1901 年的 <b>297%</b>——
+    而官方统计（1901–2026）里，它已经颁奖 <b>638 次</b>，共有 <b>1 034 位</b>获奖者或组织。
+    <span class="en">Official index, prize-amounts-2025.pdf: invested capital 297% of the 1901 level, in 2025 money.</span></p>
+  </div>
+  <div class="ab-note">
+    <h4>先说清口径，后面所有数字都照这个口径</h4>
+    <p>本页所有数字来自 nobelprize.org 官方页面与《诺贝尔基金会 2025 年报》PDF；引文一律保留英文原文，
+    中文是转述。凡是官方没有的数字（例如某机构有多少位院士），本页宁可留白，不补也不猜。</p>
+    <p>「实际价值」「实际购买力」= 按 2025 年 12 月币值折算后的数字，这是官方奖金表 PDF 自己的口径。</p>
+  </div>
+</section>
+  <section class="ab-sec" id="man">
+  <h2 class="sec-label"><span class="lab">01 · Alfred Nobel</span><span class="zh">诺贝尔其人：发明家、企业家，也是写诗的人</span></h2>
+  <p class="lead">官方对他的介绍是「发明家、企业家、科学家、商人，还写诗和戏剧」。
+  他一生有 <b>355 项专利</b>，最出名的是炸药；而今天全世界记住他的，是他把财产变成了奖金这件事。</p>
+  <div class="facts" style="margin:18px 0 0">
+    <div class="fact"><div class="n">355</div><div class="l">项专利（官方「Known for」栏）<span class="en">patents held</span></div></div><div class="fact"><div class="n">5</div><div class="l">种语言，17 岁时已能流利使用<span class="en">languages fluently at 17</span></div></div><div class="fact"><div class="n">31 M SEK</div><div class="l">留给奖金的本金（官方：约合今 22 亿克朗）<span class="en">left to fund the prizes</span></div></div><div class="fact"><div class="n">1867</div><div class="l">炸药（dynamite）专利<span class="en">the dynamite patent</span></div></div>
+  </div>
+  <div class="ab-figs">
+    <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images/52981-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-nobel-portrait.webp" width="760" height="507" alt="阿尔弗雷德·诺贝尔肖像" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>阿尔弗雷德·诺贝尔（瑞典画家 Emil Österman 绘）</b></div>
+    <div class="off">官方图注原文：A painting by Swedish artist Emil Österman depicting the founder of the Nobel Prize, Alfred Nobel. © Nobel Prize Outreach. Photo: Alexander Mahmoud</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+    <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images//53320-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-nobel-1853.webp" width="700" height="625" alt="1853 年的年轻诺贝尔" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>1853 年的年轻诺贝尔</b></div>
+    <div class="off">官方图注原文：A young Alfred Nobel, 1853. Photo: Provided by Nobel Foundation.</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+  </div>
+  <h3 class="sub"><span>From bankruptcy to dynamite</span>从破产的家庭，到 14 个国家的炸药厂</h3>
+  <p class="lead">诺贝尔出生那年，父亲伊曼纽尔就破产了。后来父亲在圣彼得堡开工厂、拿到俄军订单，家道重新起来——
+  他是在圣彼得堡那种「世界主义的气氛」里受教育、长大成人的。17 岁他已经能流利地说五种语言，
+  去巴黎在化学家 T. Jules Pelouze 的实验室工作了一年。</p>
+  <p class="lead">真正的转折来自两场爆炸。<b>1864 年，弟弟埃米尔在斯德哥尔摩制备硝化甘油时被炸死</b>；
+  1866 年，他自己的克吕梅尔工厂又被炸毁。他没有停下，而是跑到易北河上的木筏上继续试，最后发现
+  <b>硅藻土能让硝化甘油稳定下来</b>——他把这种混合物命名为 <i>dynamite</i>（希腊语 <i>dynamis</i>，意思是「力量」）。
+  官方说，基于他的工作与专利，十年之内有 16 家炸药厂在 14 个国家建起来。这就是后来那笔遗产的来源。</p>
+  <p class="lead">他 40 岁已是富人，搬进巴黎 Avenue Malakoff；1891 年因为无烟火药 ballistite 与法国政府闹翻，
+  迁居意大利圣雷莫。他终身未婚、没有自己的家庭；1876 年他登报招聘管家兼私人秘书，雇了奥地利人
+  <b>贝尔塔·冯·苏特纳</b>——她后来成为和平运动的领袖，也是诺贝尔奖的得主。1896 年 12 月 10 日，
+  他在圣雷莫的家中去世，63 岁。他有 1 500 多册私人藏书，写过诗；他留下的一句话是：
+  <b>“Home is where I work and I work everywhere.”</b>（家就是我工作的地方，而我在哪里都能工作。）</p>
+  <h3 class="sub"><span>Key events</span>官方年表里，与「这笔钱从哪来」直接相关的节点</h3>
+  <ol class="ab-tl"><li><span class="y">1833</span><div class="c"><p class="d">出生于斯德哥尔摩。同年父亲伊曼纽尔（Immanuel Nobel）破产。</p><p class="o">Alfred Nobel is born in Stockholm, Sweden. In the same year, his father, Immanuel Nobel, goes bankrupt.</p></div></li><li><span class="y">1850–52</span><div class="c"><p class="d">17 岁已能流利使用五种语言。赴巴黎，在 T. Jules Pelouze 的实验室工作一年；又游历意大利、德国与美国。</p><p class="o">At the age of 17, Alfred Nobel speaks five languages fluently. He travels to Paris and works for one year in the laboratory of T. Jules Pelouze.</p></div></li><li><span class="y">1864</span><div class="c"><p class="d">取得硝化甘油（爆炸油）第一项专利，创办 Nitroglycerin AB。同年，弟弟埃米尔（Emil）在斯德哥尔摩 Heleneborg 制备硝化甘油时被炸死。</p><p class="o">Emil, Alfred Nobel’s brother, is killed during the preparation of nitroglycerin at Heleneborg, Stockholm.</p></div></li><li><span class="y">1866</span><div class="c"><p class="d">克吕梅尔（Krümmel）工厂爆炸。他在易北河上的木筏上继续试验，发现硅藻土能让硝化甘油稳定下来，把这种混合物命名为 dynamite（希腊语 dynamis，意为「力量」）。</p><p class="o">He finds that nitroglycerin is stabilised by the addition of kieselguhr (a siliceous deposit; also known as diatomaceous earth) and calls this mixture dynamite. (From Greek dynamis meaning “power”).</p></div></li><li><span class="y">1873</span><div class="c"><p class="d">40 岁，已是富人。迁居巴黎，住进 Avenue Malakoff。</p><p class="o">At the age of 40 Alfred Nobel is a wealthy man. He moves to Paris and settles at Avenue Malakoff.</p></div></li><li><span class="y">1876</span><div class="c"><p class="d">登报招聘管家兼私人秘书，雇了奥地利人贝尔塔·冯·苏特纳（Bertha Kinsky von Chinic und Tettau，后姓 von Suttner）。她工作不久即离开，后来成为和平运动领袖——也是后来的诺贝尔奖得主。</p><p class="o">Alfred Nobel advertises for a housekeeper/personal secretary, meets with Bertha Kinsky von Chinic und Tettau (later von Suttner) and hires her. She leaves her employment after a short time and becomes a leading peace activist.</p></div></li><li><span class="y">1891</span><div class="c"><p class="d">因无烟火药 ballistite 与法国政府发生争执，离开巴黎，定居意大利圣雷莫。</p><p class="o">Alfred Nobel leaves Paris and settles in Sanremo, Italy, after a dispute with the French government over ballistite.</p></div></li><li><span class="y">1893</span><div class="c"><p class="d">聘用年轻工程师拉格纳·索尔曼（Ragnar Sohlman）——他后来成为遗嘱执行人。</p><p class="o">Alfred Nobel hires the young engineer Ragnar Sohlman, who he later names executor of his will and testament.</p></div></li><li><span class="y">1894</span><div class="c"><p class="d">买下瑞典卡尔斯库加（Karlskoga）的博福斯（Bofors-Gullspång）机械厂与 Björkborn 庄园。</p><p class="o">Alfred Nobel buys a small machine works (Bofors-Gullspång) and a manor (Björkborn) at Karlskoga, Sweden.</p></div></li><li><span class="y">1895</span><div class="c"><p class="d">第三份、也是最后一份遗嘱在巴黎的瑞典-挪威俱乐部签署。</p><p class="o">The third and final will of Alfred Nobel is signed at the Swedish-Norwegian Club in Paris.</p></div></li><li><span class="y">1896</span><div class="c"><p class="d">12 月 10 日在圣雷莫的家中去世，63 岁。</p><p class="o">Alfred Nobel dies, at the age of 63, in his home in Sanremo, Italy, on 10 December 1896.</p></div></li><li><span class="y">1901</span><div class="c"><p class="d">第一届诺贝尔奖于 12 月 10 日颁发——他去世五周年那天。</p><p class="o">The first Nobel Prizes are awarded on 10 December.</p></div></li></ol>
+  <div class="ab-note">
+    <h4>为什么不写「他因为内疚炸药被用于战争才设奖」</h4>
+    <p>这个说法流传很广，但官方页面并没有这样写。官方给出的动机是：
+    「诺贝尔有一个更好的世界的愿景。他相信人能够通过知识、科学与人文主义改善社会」。本页只写官方写了的。</p>
+  </div>
+</section>
+  <section class="ab-sec" id="will">
+  <h2 class="sec-label"><span class="lab">02 · The will</span><span class="zh">一份遗嘱：五年之后才落地</span></h2>
+  <p class="lead">1895 年 11 月 27 日，巴黎的瑞典-挪威俱乐部，诺贝尔签下第三份、也是最后一份遗嘱。
+  最重要的那句话，是全部故事的起点：</p>
+  <div class="ab-quote">
+    <p class="q">“All of my remaining realisable assets are to be disbursed as follows: the capital, converted to safe securities by my executors, is to constitute a fund, the interest on which is to be distributed annually as prizes to those who, during the preceding year, have conferred the greatest benefit on humankind.”</p>
+    <p class="zh">我把剩余的全部可变现资产按如下方式处置：本金由我的执行人转换为安全的证券，构成一笔基金；基金的利息每年作为奖金，颁给前一年为人类带来最大贡献的人。</p>
+    <p class="src">Alfred Nobel’s will, 27 November 1895 · 官方遗嘱页原文摘录</p>
+  </div>
+  <p class="lead">这句话里有两个关键词，决定了后来一百多年：<b>capital（本金）</b>与 <b>interest（利息／收益）</b>。
+  本金要「转换为安全的证券，构成一笔基金」——本金不是奖金，奖金只是它的收益。遗嘱还有一句常被引用的话：</p>
+  <div class="ab-quote">
+    <p class="q">“It is my express wish that when awarding the prizes, no consideration be given to nationality, but that the prize be awarded to the worthiest person, whether or not they are Scandinavian.”</p>
+    <p class="zh">我明确希望：评奖时不考虑国籍，奖要颁给最有价值的人，无论他是不是斯堪的纳维亚人。</p>
+  </div>
+  <p class="lead">遗嘱开启后的反应，官方用了「争议」两个字：<b>家族反对设立诺贝尔奖</b>，
+  而<b>他指定的颁奖机构拒绝照他的要求办</b>。诺贝尔指定了两名执行人，他们的任务是先谈判、再建一个组织。
+  于是，从签字到第一次颁奖，中间隔了整整五年。</p>
+  <ol class="ab-tl"><li><span class="y">1895-11-27</span><div class="c"><p class="t">遗嘱签署</p><p class="d">在巴黎瑞典-挪威俱乐部签下第三份、也是最后一份遗嘱，指定两名执行人。</p><p class="o">官方历史页：Nobel died on 10 December 1896. His will was opened shortly after … He also appointed two executors of the will.</p></div></li><li><span class="y">1896-12-10</span><div class="c"><p class="t">诺贝尔去世</p><p class="d">遗嘱开启后在瑞典与国际上引起很大争议——他把大部分财产留给了奖金。</p><p class="o">When it was opened and read after his death, the will caused a lot of controversy both in Sweden and internationally.</p></div></li><li><span class="y">1896–1900</span><div class="c"><p class="t">家人反对、被指定者拒绝</p><p class="d">家族反对设立诺贝尔奖；他指定的颁奖机构拒绝照办。执行人要与家族和各家机构谈判。</p><p class="o">His family opposed the establishment of the Nobel Prize, and the prize awarders he named refused to do what he had requested in his will.</p></div></li><li><span class="y">1900-06-29</span><div class="c"><p class="t">诺贝尔基金会成立</p><p class="d">官方组织页 Facts：Established 29 June 1900。距诺贝尔去世 4 年。</p><p class="o">Established: 29 June 1900</p></div></li><li><span class="y">1901-12-10</span><div class="c"><p class="t">首个诺贝尔奖颁发</p><p class="d">第一次颁奖每份奖金 15 万瑞典克朗。距遗嘱签署整整五年。</p><p class="o">From 1901, when the first prizes (SEK 150,000 each) were awarded … ／ It was five years before the first Nobel Prize could be awarded in 1901.</p></div></li></ol>
+  <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images/52980-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-will.webp" width="1024" height="683" alt="诺贝尔遗嘱原件" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>1895 年 11 月 27 日的遗嘱原件</b></div>
+    <div class="off">官方图注原文：The will of Alfred Nobel from 27 November, 1895 © Nobel Prize Outreach. Photo: Alexander Mahmoud</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+  <div class="ab-note">
+    <h4>遗嘱变章程：两条「不许停」的硬规则</h4>
+    <p>遗嘱是个人意愿，要能执行，得变成章程里的条文。《诺贝尔基金会章程》§2 里有两条很关键：</p>
+    <ul>
+      <li>每个奖<b>至少每五年要颁一次</b>（从基金会开始运作的次年起算）；</li>
+      <li>一次颁奖的金额，<b>不得低于当年可用于颁奖的收益的 60%</b>，且最多只能分给三个人——
+      官方另一处也写明：「任何情况下，一份奖金不得分给超过三个人」。</li>
+    </ul>
+    <p>这两条合起来的意思很直白：这份奖金<b>不能停，也不能少发</b>。基金会因此必须让本金长期赚得动。</p>
+  </div>
+</section>
+  <section class="ab-sec" id="who">
+  <h2 class="sec-label"><span class="lab">03 · Who selects</span><span class="zh">谁在颁奖：四家机构 + 一个委员会</span></h2>
+  <p class="lead">诺贝尔没有把这件事交给一个「诺贝尔委员会」，而是<b>指名</b>了机构。官方原文一句话说清：</p>
+  <div class="ab-quote">
+    <p class="q">“In his last will and testament, Alfred Nobel specifically designated the institutions responsible for the prizes he wished to be established: The Royal Swedish Academy of Sciences for the Nobel Prize in Physics and Chemistry, Karolinska Institutet for the Nobel Prize in Physiology or Medicine, the Swedish Academy for the Nobel Prize in Literature, and a Committee of five persons to be elected by the Norwegian Parliament (Storting) for the Nobel Peace Prize.”</p>
+    <p class="zh">在最后一份遗嘱中，诺贝尔明确指定了负责他想要设立的各个奖项的机构：
+    物理学奖与化学奖由瑞典皇家科学院负责，生理学或医学奖由卡罗林斯卡学院负责，
+    文学奖由瑞典学院负责，和平奖则由挪威议会选出的一个五人委员会负责。</p>
+    <p class="src">The prize-awarding institutions · nobelprize.org</p>
+  </div>
+  <table class="ab-tbl">
+    <caption>六个奖 · 谁在选 · 依据</caption>
+    <thead><tr><th>奖项</th><th>颁发机构</th><th>来历</th></tr></thead>
+    <tbody><tr><td><b>物理学</b><span class="en">Physics</span></td><td>瑞典皇家科学院<span class="en">The Royal Swedish Academy of Sciences</span></td><td>遗嘱指定</td></tr><tr><td><b>化学</b><span class="en">Chemistry</span></td><td>瑞典皇家科学院<span class="en">The Royal Swedish Academy of Sciences</span></td><td>遗嘱指定</td></tr><tr><td><b>生理学或医学</b><span class="en">Physiology or Medicine</span></td><td>卡罗林斯卡学院的诺贝尔大会<span class="en">The Nobel Assembly at Karolinska Institutet</span></td><td>遗嘱指定（Karolinska Institutet）</td></tr><tr><td><b>文学</b><span class="en">Literature</span></td><td>瑞典学院<span class="en">The Swedish Academy</span></td><td>遗嘱指定</td></tr><tr><td><b>和平</b><span class="en">Peace</span></td><td>挪威诺贝尔委员会（挪威议会选出的五人委员会）<span class="en">The Norwegian Nobel Committee</span></td><td>遗嘱指定（a committee of five persons to be elected by the Norwegian Storting）</td></tr><tr class="econ"><td><b>经济学</b><span class="en">Economic Sciences</span></td><td>瑞典皇家科学院<span class="en">The Royal Swedish Academy of Sciences</span></td><td>1968 年由瑞典央行设立、1969 年首次颁发</td></tr></tbody>
+  </table>
+  <div class="ab-note warn">
+    <h4>经济科学奖是个例外：它不叫「诺贝尔奖」</h4>
+    <p>1968 年，瑞典央行（Sveriges Riksbank）借着自己成立 300 周年，向诺贝尔基金会捐了一笔钱，设立了这个奖；
+    1969 年首次颁发给拉格纳·弗里施（Ragnar Frisch）与扬·丁伯根（Jan Tinbergen）。
+    官方对它的说明只有两句：<b>奖金金额与诺贝尔奖相同，并且由央行支付</b>。
+    它的全名里写的是「纪念阿尔弗雷德·诺贝尔」——<i>Sveriges Riksbank Prize in Economic Sciences in Memory
+    of Alfred Nobel</i>；官方页面在称呼上也分得很清：前五个奖写 Nobel Prize in…，这一个只写这串全名。
+    评奖同样由瑞典皇家科学院负责。</p>
+  </div>
+  <h3 class="sub"><span>How it is decided</span>怎么选：委员会、50 年保密期与 12 月 10 日</h3>
+  <p class="lead">章程 §6 规定：每个瑞典颁奖机构为每个奖项任命一个 <b>3 到 5 人</b>的诺贝尔委员会，
+  负责提出授奖意见；和平奖则由遗嘱里那个「挪威议会选出的委员会」（挪威诺贝尔委员会）裁定。
+  评选依据的材料，<b>在奖项决定满 50 年之前不对外公开</b>——这就是那些「谁被提名过」的名单要等半个世纪的原因。</p>
+  <p class="lead">颁奖的日子也是诺贝尔自己定下的：<b>1901 年以来，颁奖礼都在 12 月 10 日举行，即诺贝尔逝世纪念日</b>。
+  这一天得主会拿到三样东西：<b>一张证书、一枚奖章，以及一份写明奖金金额的文件</b>。
+  奖章用 18K 再生金手工制作；证书是独一无二的艺术品，由瑞典与挪威的艺术家与书法家制作。
+  物理、化学、医学、文学四枚奖章的正面相同（诺贝尔头像与「1833–1896」），背面随颁奖机构而变；
+  和平奖与经济科学奖的奖章也是诺贝尔头像，但设计略有不同。</p>
+  <div class="ab-figs">
+    <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images//5948-landscape-x-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-ceremony-1901.webp" width="1024" height="676" alt="1901 年第一届诺贝尔奖颁奖礼" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>1901 年第一届颁奖礼（官方图注：Musical Academy）</b></div>
+    <div class="off">官方图注原文：The first Nobel Prize award ceremony was held in the Musical Academy 1901. Public domain.</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+    <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images/tasuku-honjo-award-ceremony56619-hero-desktop-2x.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-ceremony-stockholm.webp" width="1500" height="563" alt="斯德哥尔摩音乐厅颁奖" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>斯德哥尔摩音乐厅：2018 年本庶佑从瑞典国王手中接过奖章</b></div>
+    <div class="off">官方图注原文：Tasuku Honjo receiving his Nobel Prize from H.M. King Carl XVI Gustaf of Sweden at the Stockholm Concert Hall, 10 December 2018. © Nobel Prize Outreach. Photo: Alexander Mahmoud</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+    <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images/121947-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-ceremony-oslo.webp" width="1024" height="678" alt="奥斯陆市政厅和平奖颁奖" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>奥斯陆市政厅：1993 年和平奖颁奖礼</b></div>
+    <div class="off">官方图注原文：The Nobel Peace Prize award ceremony at Oslo City Hall, Norway, on 10 December 1993. © Knudsens fotosenter/Dextra Photo, Norsk Teknisk Museum.</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+  </div>
+</section>
+  <section class="ab-sec" id="foundation">
+  <h2 class="sec-label"><span class="lab">04 · The Nobel Foundation</span><span class="zh">诺贝尔基金会：管这笔钱的那个机构</span></h2>
+  <p class="lead">诺贝尔去世四年后的 <b>1900 年 6 月 29 日</b>，诺贝尔基金会成立——官方称它是一个<b>私人机构</b>。
+  它有两个任务，一个关于钱，一个关于「无形的东西」。</p>
+  <div class="ab-quote">
+    <p class="q">“The Nobel Foundation, a private institution established in 1900, has ultimate responsibility for fulfilling the intentions in Alfred Nobel’s will. A central task of the Nobel Foundation is to manage Alfred Nobel’s fortune in a manner that ensures a secure financial standing for the Nobel Prize over the long term and to protect the common interests of the prize-awarding institutions appointed in the will, making certain they are guaranteed independence in their work of selecting Nobel Laureates.”</p>
+    <p class="zh">诺贝尔基金会是一个 1900 年成立的私人机构，最终负责实现阿尔弗雷德·诺贝尔遗嘱中的意愿。
+    它的核心任务是：以能保证诺贝尔奖<b>长期财务稳健</b>的方式管理诺贝尔的财产，并维护遗嘱中指定的各颁奖机构的共同利益，
+    确保它们在评选得主时<b>独立</b>——此外，它还负责通过一系列公共项目强化诺贝尔奖的地位。</p>
+    <p class="src">The Nobel Foundation: tasks · nobelprize.org</p>
+  </div>
+  <h3 class="sub"><span>Governance</span>谁在管：董事会 7 席 + 2 副手，两年一届</h3>
+  <table class="ab-tbl">
+    <caption>诺贝尔基金会章程（Statutes）§6 / §13 / §18 与官方组织页</caption>
+    <thead><tr><th>规则</th><th>内容与官方原文</th></tr></thead>
+    <tbody><tr><td><b>董事会 7 席 + 2 名副手</b></td><td>七名成员与两名副手，由各颁奖机构的受托人选举产生；须为瑞典或挪威公民。<span class="en">§ 13. The Foundation shall be represented by a Board of Directors, which has its registered office in Stockholm and consists of seven members and two deputies, Swedish or Norwegian citizens, who shall be elected by the trustees of the prize-awarding bodies.</span></td></tr><tr><td><b>董事会内产生主席、副主席与执行董事</b></td><td>董事会从自己的成员中选出主席、副主席与执行董事（Executive Director）。<span class="en">The Board shall choose from among its own members a Chairman, a Vice-Chairman and an Executive Director.</span></td></tr><tr><td><b>两年一届，5 月 1 日起算</b></td><td>董事与副手任期两年，从 5 月 1 日起算。<span class="en">The members of the Board and the deputies shall be appointed for a term of two years, counting from 1 May.</span></td></tr><tr><td><b>6 名审计，其中 1 名由政府任命</b></td><td>每个日历年的董事会管理与账目，由六名审计审查；政府在新年前任命其中一名，并担任审计主席。<span class="en">§ 18. The administration of the Board and the accounts of the Foundation shall, for each calendar year, be examined by six auditors. Of these auditors the Government shall, before the beginning of the year, appoint one, who shall be the chairman of the auditors.</span></td></tr><tr><td><b>颁奖委员会 3–5 人</b></td><td>每家瑞典颁奖机构为每个奖项任命一个由三、四或五人组成的诺贝尔委员会，提出授奖意见。<span class="en">§ 6. For each prize awarded by a Swedish prize-awarding body, the latter shall appoint a Nobel Committee consisting of three, four or five persons, to give their opinion on the matter of the award of the prize.</span></td></tr><tr><td><b>评选材料 50 年内不公开</b></td><td>只有在该届奖项决定满 50 年之后，颁奖机构才可以（自行决定方式与范围）向第三方开放评选依据的材料。<span class="en">Such disclosure shall, however, not occur until at least 50 years have elapsed from the date of the relevant prize decision.</span></td></tr></tbody>
+  </table>
+  <div class="ab-note">
+    <h4>两个任务的份量，是反过来的</h4>
+    <p>官方历史页有一句话说得很妙：基金会成立时<b>主要是为了投资诺贝尔的财产</b>，
+    同时也管理诺贝尔奖的「无形价值」（immaterial value）；一百多年后，<b>第一件事基本没变，第二件事却越来越重要</b>——
+    因为奖项积累起了声望。今天基金会名下还挂着诺贝尔奖官方站点（1995 年上线）、
+    诺贝尔奖博物馆（2001 年，斯德哥尔摩）、诺贝尔和平中心（2004 年，奥斯陆）等一整套公共业务；
+    斯德哥尔摩的诺贝尔中心（Nobel Center）计划在 2031 年开放。</p>
+    <p>基金会自己也有房产：斯德哥尔摩 Sturegatan 14，2025 年末的市场价值是 <b>2.12 亿克朗</b>——
+    这处自有房产被单独计入本金，也是年报里「含自有房产」与「不含自有房产」两个数字的差别所在。</p>
+  </div>
+  <figure class="ab-fig">
+  <a href="https://www.nobelprize.org/images/138700-landscape-large.jpg" title="查看官方原图" rel="noopener"><img src="assets/about/about-foundation.webp" width="760" height="504" alt="诺贝尔基金会得主签名簿" loading="lazy" decoding="async"></a>
+  <figcaption class="meta">
+    <div class="look"><b>得主签名簿：1952 年以来每位得主都在上面签过名（2022 年，Charpentier 在基金会）</b></div>
+    <div class="off">官方图注原文：Emmanuelle Charpentier signs the Nobel Foundation&#x27;s guest book, signed by the laureates since 1952, during her visit to the Nobel Foundation on 8 December 2022. © Nobel Prize Outreach. Photo: Dan Lepp</div>
+    <div class="cr">取自 nobelprize.org 官方图库 · 点图可开官方原图（本页仅等比缩放为 WebP，未裁切、未加字，非商业教育用途）</div>
+  </figcaption>
+</figure>
+</section>
+  <section class="ab-sec" id="money">
+  <h2 class="sec-label"><span class="lab">05 · The money</span><span class="zh">钱：一百多年还在发，靠的是这五件事</span></h2>
+  <p class="lead">把历史摊开看，基金会其实一直在做一件很窄的事：<b>让本金跑赢它自己要发出去的钱</b>。
+  中间失败了两次（互联网泡沫与 2008 年金融危机），赢了一场关键的仗（税），最后靠纪律站住。</p>
+  <div class="ab-ans"><div class="conds"><div class="c"><span class="k">①</span><b>遗嘱把本金和收益分开了</b><p>诺贝尔写的是：本金构成一笔「基金」，每年发出去的是<b>这笔基金的利息</b>——不是本金。官方基金会的目标写得也很直白：长期要有足够高的回报，用来维持诺贝尔奖的财务基础、并保证评奖委员会独立工作。</p><p style="font-size:12px;color:var(--ink-3);font-style:italic;margin:8px 0 0">the capital … is to constitute a fund, the interest on which is to be distributed annually as prizes</p></div><div class="c"><span class="k">②</span><b>税：从 40% 打到 0</b><p>基金会 1904 年第一次尝试免税，议会没通过。1925 年，<b>全部颁奖机构决定当年不发奖</b>——这被看作抗议，反而赢得同情。1927 年后税负从 40% 降到 3%；1938 年只有 5%，二战后升到 21%；<b>1946 年，基金会拿到免税地位</b>（理由是它应当被视作一个「学会」）。</p><p style="font-size:12px;color:var(--ink-3);font-style:italic;margin:8px 0 0">the parliament granted the foundation a tax cut from 40% to 3% … in 1946 the Nobel Foundation became tax exempt</p></div><div class="c"><span class="k">③</span><b>投资：从只准买国债，到被放手去投资</b><p>遗嘱里的「安全的证券」在 1901 年被理解成国债、房产抵押贷款和公司债——本金因此缩了几十年。1939 年允许买房产；1950 年代初政府放行，董事会「实际上被给了自由的手」去买大部分类型的股票。1980 年代本金二十年翻了四倍；<b>1991 年，本金的实际价值回到 1901 年的水平</b>。</p><p style="font-size:12px;color:var(--ink-3);font-style:italic;margin:8px 0 0">in the early 1950s the Swedish Government sanctioned changes, whereby the board for all practical purposes was given a free hand to invest … also in most types of stocks</p></div><div class="c"><span class="k">④</span><b>今天的目标写在年报里：通胀后年化 ≥ 3%</b><p>基金会给自己定的目标是<b>扣除通胀后年化至少 3%</b>的长期回报，并认为只要达到这个水平，就能覆盖未来的支出。战略基准是 55% 股票 / 10% 债券 / 10% 房产 / 25% 另类资产；董事会定区间，投资委员会（<b>不领报酬</b>）做战术配置与选管理人。</p><p style="font-size:12px;color:var(--ink-3);font-style:italic;margin:8px 0 0">The Foundation aims to deliver a total inflation-adjusted return of at least 3% annually.</p></div><div class="c"><span class="k">⑤</span><b>花得比赚得少：这是算术核心</b><p>2025 年，基金会全部支出（奖金 + 评奖委员会报酬 + 诺贝尔周 + 行政）共 <b>1.481 亿克朗</b>，而年末投资资本是 <b>67.44 亿克朗</b>——两个数相除，支出约等于本金的 2.2%（本页据年报数字计算）。只要长期回报稳住 3% 以上，奖金就能一直发下去。</p><p style="font-size:12px;color:var(--ink-3);font-style:italic;margin:8px 0 0">the overall sum of all Nobel Prizes and operating expenses was SEK 148.1 million</p></div></div></div>
+  <ol class="ab-tl"><li><span class="y">1901</span><div class="c"><p class="t">起点</p><p class="d">本金 31,587,202 克朗（按 2025 年币值约 22.7 亿）。第一年每份奖金 15 万克朗。</p><p class="o">官方奖金表 PDF：1901 年资本市值 31 587 202 SEK = 2 269 492 604 SEK（2025 年 12 月币值），指数 100%</p></div></li><li><span class="y">1901–1930s</span><div class="c"><p class="t">只准「安全证券」</p><p class="d">国债、公司债、斯德哥尔摩房产、借给瑞典市政府；加上高额税负，本金几十年实际在缩水。</p><p class="o">the first was the conservative investment strategy that followed from Nobel’s word “safe” in the will, which led to three kinds of investments: bonds in companies, real estate in Stockholm and lending money to Swedish municipalities</p></div></li><li><span class="y">1925</span><div class="c"><p class="t">一年不发奖</p><p class="d">全部颁奖机构决定当年不颁奖，作为对税负的抗议；舆论站在基金会一边。</p><p class="o">in 1925, a year when all the prize-awarding institutions decided to not award prizes. This was seen as a protest and was not criticised.</p></div></li><li><span class="y">1946</span><div class="c"><p class="t">免税</p><p class="d">议会通过免税，理由是基金会应被视作一个「学会」。税负不再吞掉收益。</p><p class="o">in 1946 the Nobel Foundation became tax exempt</p></div></li><li><span class="y">1950s 初</span><div class="c"><p class="t">允许买股票</p><p class="d">政府放行，董事会在此后可以投大部分类型的股票——本金开始能长大。</p><p class="o">in the early 1950s the Swedish Government sanctioned changes … also in most types of stocks</p></div></li><li><span class="y">1980s</span><div class="c"><p class="t">二十年翻四倍</p><p class="d">真正的增长从 1980 年代开始，二十年间本金的规模翻了四倍。</p><p class="o">they did not really start to grow until the 1980s. At that time, however, they grew fast, eventually quadrupling over a 20-year period.</p></div></li><li><span class="y">1991</span><div class="c"><p class="t">回到原点</p><p class="d">本金的实际价值回到 1901 年的水平——用了 90 年。同年奖金实际购买力也恢复到 1901 年的 101%。</p><p class="o">In 1991, the funds were back to their original size … The real value of the prize amount in SEK terms was finally restored in 1991.</p></div></li><li><span class="y">1990s–2000</span><div class="c"><p class="t">涨得最快，也跌得最狠</p><p class="d">1990 年代规则再放宽，最多 70% 本金可以投股票。互联网泡沫破裂时，市值从接近 50 亿掉到略高于 30 亿——损失近 30%。</p><p class="o">up to 70% of the capital was invested in shares. This contributed to the decrease during the dot com-crash around 2000, when the value went from almost 5 billion to little more than 3 billion SEK – a loss of almost 30%.</p></div></li><li><span class="y">2008–2009</span><div class="c"><p class="t">又一次重创</p><p class="d">金融危机中基金会再次承受重大损失。2010 年代起转为均衡配置：股票约 40%、债券 20%、其他（主要是对冲基金）40%。</p><p class="o">then the foundation sustained heavy losses during the crisis in 2008–2009. In the 2010s, the foundation has worked to stabilise its investments, through balancing different assets.</p></div></li><li><span class="y">2025</span><div class="c"><p class="t">只涨 0.9% 的一年</p><p class="d">全年回报 +0.9%（基准 +4.6%）——克朗大幅升值拖掉约 6 个百分点，行情又由少数美国大盘股驱动。但五年平均年化仍有 +7.7%。</p><p class="o">The total return was +0.9 percent, compared to +4.6 percent for the benchmark index … The investment capital has over the past five years increased by an average of +7.7 percent annually.</p></div></li></ol>
+  <h3 class="sub"><span>2025 annual report</span>2025 年这一年：赚了多少，花了多少</h3>
+  <div class="ab-card">
+    <div class="c"><div class="n">6 744 M</div><div class="l">2025 年末投资资本市值（克朗）<span class="en">SEK 6,744 million（2024：6,797）</span></div></div>
+    <div class="c"><div class="n">6 532 M</div><div class="l">扣除自有房产后的投资资本<span class="en">SEK 6,532 million（2024：6,600）</span></div></div>
+    <div class="c"><div class="n">+0.9%</div><div class="l">2025 年投资组合回报<span class="en">基准 +4.6%</span></div></div>
+    <div class="c"><div class="n">+7.7%</div><div class="l">过去五年投资资本年均增长<span class="en">five-year average</span></div></div>
+    <div class="c"><div class="n">148.1 M</div><div class="l">2025 年全部支出（奖金 + 运营）<span class="en">SEK 148.1 million（2024：138.2）</span></div></div>
+    <div class="c"><div class="n">2.2%</div><div class="l">支出 ÷ 年末本金（可持续的算术）<span class="en">148.1 ÷ 6,744</span></div></div>
+  </div>
+  <h3 class="sub"><span>Where the money goes</span>花在哪：奖金只占三分之一多一点</h3>
+  <table class="ab-tbl">
+    <caption>2025 年支出结构（单位：百万克朗，官方年报）</caption>
+    <thead><tr><th>项目</th><th style="text-align:right">金额</th></tr></thead>
+    <tbody><tr><td>奖金（全部奖项合计）<span class="en">the prizes</span></td><td style="text-align:right"><b>55.0</b> 百万</td></tr><tr><td>评奖委员会报酬<span class="en">compensation to the Prize Committees</span></td><td style="text-align:right"><b>36.8</b> 百万</td></tr><tr><td>斯德哥尔摩与奥斯陆的诺贝尔周<span class="en">the Nobel Week in Stockholm and Oslo</span></td><td style="text-align:right"><b>34.4</b> 百万</td></tr><tr><td>行政等<span class="en">administration etc.</span></td><td style="text-align:right"><b>21.9</b> 百万</td></tr></tbody>
+  </table>
+  <p class="lead">也就是说：2025 年六个奖的奖金合计 5 500 万克朗，而<b>评奖委员会报酬、诺贝尔周、行政</b>三项
+  加起来 9 310 万——发奖金这件事的「配套成本」，比奖金本身还高。</p>
+  <h3 class="sub"><span>How it is invested</span>钱放在哪：2025 年末的资产暴露</h3>
+  <div class="ab-chart"><p class="cap">投资资本暴露（2025 年末，官方年报）</p><div class="ab-rows"><div class="ab-row"><span class="y" style="text-align:right">股票基金</span><span class="t"><i class="f cap" style="width:93.3%"></i></span><span class="v">56%</span></div><div class="ab-row"><span class="y" style="text-align:right">房产与基建基金</span><span class="t"><i class="f cap" style="width:13.3%"></i></span><span class="v">8%</span></div><div class="ab-row"><span class="y" style="text-align:right">固定收益与现金</span><span class="t"><i class="f cap" style="width:21.7%"></i></span><span class="v">13%</span></div><div class="ab-row"><span class="y" style="text-align:right">另类资产</span><span class="t"><i class="f cap" style="width:36.7%"></i></span><span class="v">22%</span></div><div class="ab-row"><span class="y" style="text-align:right">汇率对冲的累计结果</span><span class="t"><i class="f cap" style="width:1.7%"></i></span><span class="v">1%</span></div></div>
+  <p class="ab-jump">括号里是 2024 年的数字：56（56）股票基金 · 8（9）房产与基建 · 13（12）固收与现金 · 22（24）另类 · 1（−1）汇率对冲累计。</p></div>
+  <p class="lead">这些实际数字背后，是董事会定下的<b>战略基准组合</b>：</p>
+  <table class="ab-tbl">
+    <caption>战略正常组合（Strategic normal portfolio，2025 年报）</caption>
+    <thead><tr><th>资产</th><th style="text-align:right">基准权重</th><th>对应指数</th></tr></thead>
+    <tbody><tr><td>股票</td><td style="text-align:right"><b>55%</b></td><td style="font-size:12.6px;color:var(--ink-3)">44% MSCI All Country World Index + 11% SIX RX（均含股息）</td></tr><tr><td>债券</td><td style="text-align:right"><b>10%</b></td><td style="font-size:12.6px;color:var(--ink-3)">Handelsbanken All Bond Index</td></tr><tr><td>房产</td><td style="text-align:right"><b>10%</b></td><td style="font-size:12.6px;color:var(--ink-3)">基金会自有房产组合的回报</td></tr><tr><td>另类资产</td><td style="text-align:right"><b>25%</b></td><td style="font-size:12.6px;color:var(--ink-3)">HFRI Fund of Funds Composite Index</td></tr></tbody>
+  </table>
+  <p class="lead">基金会给自己定的目标是<b>通胀后年化至少 3%</b>；它是联合国责任投资原则（PRI）的签署方，
+  并有专门的责任投资指引（依据联合国全球契约，不投生产争议武器或核武器的公司，也不投煤炭开采或煤电收入超过 5% 的公司）。
+  投资委员会<b>不领报酬</b>，
+  负责定期复核规则、做战术配置、挑选管理人。</p>
+  <p class="lead">短期成绩起伏很大——近五年投资组合回报：2021 <b>+18.3%</b> · 2022 <b>−1.9%</b> · 2023 <b>+10.6%</b> · 2024 <b>+11.6%</b> · 2025 <b>+0.9%</b>。
+  2025 年这一年的原因是官方自己写的：克朗大幅升值（对美元尤甚）带来约 <b>−6 个百分点</b>，
+  而市场又被少数几家美国大盘股的暴涨带着走；基金会为了提高抗跌性配置了更多防御性公司与未上市资产，
+  于是那年反而跑输基准。</p>
+</section>
+  <section class="ab-sec" id="chart">
+  <h2 class="sec-label"><span class="lab">06 · 1901–2025</span><span class="zh">一百二十五年一张表：官方口径的实际价值指数</span></h2>
+  <p class="lead">诺贝尔奖官方每年公布一张表，把「当年奖金额」和「当年本金市值」都按 2025 年 12 月的币值折算，
+  再与 1901 年相比。<b>1901 = 100%</b>。下面两张图都照这个口径，数字逐点取自官方 PDF。</p>
+  <div class="ab-chart"><p class="cap">① 一份奖金的实际购买力（1901 = 100%）</p><div class="ab-rows"><div class="ab-row"><span class="y">1901</span><span class="t"><i class="f prize" style="width:66.7%"></i><span class="b" style="left:66.7%"></span></span><span class="v">100%</span></div><div class="ab-row"><span class="y">1919</span><span class="t"><i class="f prize low" style="width:18.7%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">28%</span></div><div class="ab-row"><span class="y">1929</span><span class="t"><i class="f prize low" style="width:38.0%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">57%</span></div><div class="ab-row"><span class="y">1950</span><span class="t"><i class="f prize low" style="width:24.0%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">36%</span></div><div class="ab-row"><span class="y">1970</span><span class="t"><i class="f prize low" style="width:24.7%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">37%</span></div><div class="ab-row"><span class="y">1980</span><span class="t"><i class="f prize low" style="width:22.7%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">34%</span></div><div class="ab-row"><span class="y">1991</span><span class="t"><i class="f prize" style="width:67.3%"></i><span class="b" style="left:66.7%"></span></span><span class="v">101%</span></div><div class="ab-row"><span class="y">2001</span><span class="t"><i class="f prize" style="width:96.0%"></i><span class="b" style="left:66.7%"></span></span><span class="v">144%</span></div><div class="ab-row"><span class="y">2008</span><span class="t"><i class="f prize" style="width:85.3%"></i><span class="b" style="left:66.7%"></span></span><span class="v">128%</span></div><div class="ab-row"><span class="y">2012</span><span class="t"><i class="f prize low" style="width:65.3%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">98%</span></div><div class="ab-row"><span class="y">2016</span><span class="t"><i class="f prize low" style="width:64.7%"></i><span class="b" style="left:66.7%"></span></span><span class="v low">97%</span></div><div class="ab-row"><span class="y">2020</span><span class="t"><i class="f prize" style="width:76.0%"></i><span class="b" style="left:66.7%"></span></span><span class="v">114%</span></div><div class="ab-row"><span class="y">2025</span><span class="t"><i class="f prize" style="width:68.0%"></i><span class="b" style="left:66.7%"></span></span><span class="v">102%</span></div></div><p class="ab-jump">斜纹条 = 低于 1901 年的水平。1919 年只剩 28%——名义奖金没涨（15.1 万 → 13.3 万克朗），物价却涨了几倍；1991 年才回到 101%。</p></div>
+  <div class="ab-chart"><p class="cap">② 基金本金的实际价值（1901 = 100%）</p><div class="ab-rows"><div class="ab-row"><span class="y">1901</span><span class="t"><i class="f cap" style="width:29.4%"></i><span class="b" style="left:29.4%"></span></span><span class="v">100%</span></div><div class="ab-row"><span class="y">1975</span><span class="t"><i class="f cap low" style="width:15.0%"></i><span class="b" style="left:29.4%"></span></span><span class="v low">51%</span></div><div class="ab-row"><span class="y">1980</span><span class="t"><i class="f cap low" style="width:14.4%"></i><span class="b" style="left:29.4%"></span></span><span class="v low">49%</span></div><div class="ab-row"><span class="y">1987</span><span class="t"><i class="f cap" style="width:41.5%"></i><span class="b" style="left:29.4%"></span></span><span class="v">141%</span></div><div class="ab-row"><span class="y">1993</span><span class="t"><i class="f cap" style="width:53.2%"></i><span class="b" style="left:29.4%"></span></span><span class="v">181%</span></div><div class="ab-row"><span class="y">1999</span><span class="t"><i class="f cap" style="width:82.1%"></i><span class="b" style="left:29.4%"></span></span><span class="v">279%</span></div><div class="ab-row"><span class="y">2001</span><span class="t"><i class="f cap" style="width:74.4%"></i><span class="b" style="left:29.4%"></span></span><span class="v">253%</span></div><div class="ab-row"><span class="y">2002</span><span class="t"><i class="f cap" style="width:55.0%"></i><span class="b" style="left:29.4%"></span></span><span class="v">187%</span></div><div class="ab-row"><span class="y">2008</span><span class="t"><i class="f cap" style="width:50.9%"></i><span class="b" style="left:29.4%"></span></span><span class="v">173%</span></div><div class="ab-row"><span class="y">2019</span><span class="t"><i class="f cap" style="width:78.8%"></i><span class="b" style="left:29.4%"></span></span><span class="v">268%</span></div><div class="ab-row"><span class="y">2021</span><span class="t"><i class="f cap" style="width:95.6%"></i><span class="b" style="left:29.4%"></span></span><span class="v">325%</span></div><div class="ab-row"><span class="y">2025</span><span class="t"><i class="f cap" style="width:87.4%"></i><span class="b" style="left:29.4%"></span></span><span class="v">297%</span></div></div><p class="ab-jump">官方表格从 1975 年才开始记录本金市值：那一年它只剩 1901 年的 51%。此后一路上行，2021 年达到 325% 的峰值。</p></div>
+  <div class="ab-lg">
+    <span><i style="background:var(--gold-deep)"></i>奖金（实际购买力）</span>
+    <span><i style="background:var(--navy-soft)"></i>本金（实际价值）</span>
+    <span><i style="background:repeating-linear-gradient(45deg,rgba(142,101,24,.42) 0 5px,rgba(142,101,24,.16) 5px 10px)"></i>低于 1901 年</span>
+  </div>
+  <p class="lead" style="margin-top:20px">把两条线放在一起看，就是「为什么还发得出」的图形版本：
+  <b>奖金这条线跌了 90 年才回到起点</b>（1919 年谷底 28% → 1991 年 101%）；
+  而<b>本金这条线从 1975 年的 51% 涨到今天的 297%</b>——不是因为奖金发得少，恰恰是因为本金被允许去承担风险、去赚钱。</p>
+  <p class="lead">名义金额（克朗）：1901 <b>150 782</b> · 1969 <b>375 000</b> · 1991 <b>6 000 000</b> · 2001 <b>10 000 000</b> · 2012 <b>8 000 000</b> · 2020 <b>10 000 000</b> · 2023 <b>11 000 000</b> · 2025 <b>11 000 000</b> · 2026 <b>12 000 000</b>。2026 年的 1 200 万是官方金融页写明的数字；2025 年是 1 100 万。
+  注意 2012–2016 年一度降到 800 万——「可持续」不等于「每年都涨」。</p>
+  <p class="ab-jump">原始表格：<a href="https://www.nobelprize.org/uploads/2026/04/prize-amounts-2025.pdf" rel="noopener">prize-amounts-2025.pdf</a>（官方 PDF，本页数字逐点取自它）</p>
+</section>
+  <section class="ab-sec" id="observe">
+  <h2 class="sec-label"><span class="lab">07 · Caveats</span><span class="zh">三件必须说清楚的事，以及一条反方</span></h2>
+  <div class="ab-note warn">
+    <h4>①「可持续」不等于「一直涨」</h4>
+    <p>奖金从 1901 年的 15 万克朗起步，到 1919 年实际购买力只剩 1901 年的 28%；
+    1 000 万克朗的档位 2001 年出现过，2012 年又降回 800 万，直到 2023 年才回到 1 100 万、2026 年升到 1 200 万。
+    官方历史页给的原因很朴素：先是只准买「安全证券」，后是高额税负——<b>不是管理失误，是规则把人锁住了</b>。</p>
+  </div>
+  <div class="ab-note warn">
+    <h4>② 单年成绩与长期成绩必须分开读</h4>
+    <p>2025 年投资组合只赚了 <b>+0.9%</b>，输给基准 3.7 个百分点；而近五年投资资本年均增长 <b>+7.7%</b>。
+    目标本身是「长期通胀后年化 ≥3%」，所以任何单一年份的输赢都不构成结论——
+    2025 年跑输的原因（克朗升值、少数美国大盘股拉动）恰恰是「分散配置」的代价。</p>
+  </div>
+  <div class="ab-note warn">
+    <h4>③ 本金涨到 297%，不全是「管理得好」</h4>
+    <p>至少还有三个别的解释，必须一起摆出来：<b>一是</b>1946 年的免税是议会特批的，不是市场逻辑，
+    官方记的原因是「基金会应被视作一个学会」；<b>二是</b>1980–2000 年是全球股市的长期上行期，
+    规则放开得恰好；<b>三是</b>官方表格里本金市值只从 1975 年才有记录，而那一年它已只剩 1901 年的 51%——
+    「从 51% 到 297%」这段涨幅，起点本身就低。同样的钱如果在 1975 年被要求全买国债，故事会完全不同
+    （官方口径：1901–1930 年代只允许国债、公司债、斯德哥尔摩房产与借给市政府）。</p>
+  </div>
+  <div class="ab-note">
+    <h4>反方：那是不是说明「诺贝尔奖的伟大来自它的钱」？</h4>
+    <p>这是这套叙事最容易被推到的位置，但它站不住：官方历史页对基金会的定位是「投资财产」+「管理诺贝尔奖的<b>无形价值</b>」，
+    并明确说后者随声望积累<b>越来越重要</b>；而 2025 年奖金（5 500 万克朗）只占基金会支出的三分之一多一点。
+    奖金的数额可以砍（2012 年就砍过），但获奖名单不能砍。所以本页的结论要收窄到一句话：
+    <b>钱解决的是「这件事能不能持续办下去」，不是「它为什么重要」。</b></p>
+  </div>
+</section>
+  <section class="ab-sec" id="think"><h2 class="sec-label"><span class="lab">08 · Think about it</span><span class="zh">想想看：几个没有标准答案的问题</span></h2><ol class="ab-think"><li>遗嘱里写的是「本金的利息」。如果诺贝尔当年写的是「本金的一部分」，今天会有什么不同？</li><li>1925 年一年不发奖，反而给基金会赢得了同情。为什么「不发」也能是一种力量？</li><li>1946 年的免税是政府特批的。这会伤害诺贝尔奖的独立性吗？（提示：董事会 7 人由各颁奖机构的受托人选举，政府只在 6 名审计里任命 1 名）</li><li>2025 年基金会只赚了 +0.9%，比基准差 3.7 个百分点。为什么它不干脆全买股票？（提示：奖金要发一百年，不是发一年）</li><li>本金的实际价值是 1901 年的 297%。这能直接推出「基金会管理得很好」吗？还有哪些别的解释？</li><li>2025 年支出 1.481 亿，其中奖金只有 5,500 万。剩下 9,310 万花在哪三件事上？这三件事能不能省？</li></ol></section>
+  <section class="ab-sec" id="srcs"><h2 class="sec-label"><span class="lab">09 · Sources</span><span class="zh">来源：全部为官方页面与官方 PDF</span></h2><ul class="ab-srcs"><li>Alfred Nobel — 其人（Quick facts / Key events） — <code>https://www.nobelprize.org/alfred-nobel/</code></li><li>Alfred Nobel’s life and work — <code>https://www.nobelprize.org/alfred-nobel/alfred-nobels-life-and-work/</code></li><li>Alfred Nobel’s will — 遗嘱原文摘录与落地经过 — <code>https://www.nobelprize.org/alfred-nobel/alfred-nobels-will/</code></li><li>The Nobel Prize organisation — 组织总览（成立日期 1900-06-29、得主 1,034 人） — <code>https://www.nobelprize.org/the-nobel-prize-organisation/</code></li><li>The prize-awarding institutions — 各奖项的颁发机构 — <code>https://www.nobelprize.org/the-nobel-prize-organisation/prize-awarding-institutions/</code></li><li>The Nobel Foundation: tasks — 基金会的职责 — <code>https://www.nobelprize.org/about/the-nobel-foundation-tasks/</code></li><li>Statutes of the Nobel Foundation — 章程（§2、§6、§13、§18 等） — <code>https://www.nobelprize.org/about/statutes-of-the-nobel-foundation/</code></li><li>Financial management — 投资沿革与 2026 年奖金额 — <code>https://www.nobelprize.org/about/financial-management/</code></li><li>The Sveriges Riksbank Prize in Economic Sciences — 1968 年央行捐赠与 1969 年首次颁发 — <code>https://www.nobelprize.org/prizes/economic-sciences/</code></li><li>“We’re in this forever” — 诺贝尔基金会百年史（税、投资、泡沫与危机） — <code>https://www.nobelprize.org/were-in-this-forever-the-history-of-the-nobel-foundation/</code></li><li>Nobel Prize facts — 638 次颁奖 / 1,034 位得主、奖章与证书 — <code>https://www.nobelprize.org/prizes/facts/nobel-prize-facts/</code></li><li>Award ceremonies — 12 月 10 日，诺贝尔逝世纪念日 — <code>https://www.nobelprize.org/nobel-prize-award-ceremonies/</code></li><li>The Nobel Foundation annual report 2025（PDF）— 回报、资产配置、支出结构 — <code>https://www.nobelprize.org/uploads/2026/04/annual-report-2025.pdf</code></li><li>Prize amount and market value of invested capital（PDF）— 1901–2025 逐年奖金与本金表 — <code>https://www.nobelprize.org/uploads/2026/04/prize-amounts-2025.pdf</code></li><li>Guidelines concerning responsible investments 2026（PDF） — <code>https://www.nobelprize.org/uploads/2026/04/guidelines-investments-2026.pdf</code></li></ul></section>
+</main>
+
+<footer class="ab-ft wrap">
+  <p>本页数据 2026-10-10 拉取（官方页面 + 基金会 PDF）。口径与引文纪律见页首「先说清口径」一节。</p>
+  <p>图片均取自 nobelprize.org 官方页面，仅做等比缩放与格式转换（WebP），未裁切、未加字；
+  每张图保留官方图注原文，并可点开官方原图。版权归原权利人所有，本页为非商业教育用途页面。</p>
+  <p>2026 诺贝尔奖 · 站点共四页：<a href="index.html">主站（六个奖的展厅）</a> ·
+  <a href="jp.html">日本科学奖</a> · <a href="cn.html">华人科学奖</a> · 本页（诺贝尔与基金会）</p>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="回到顶部">↑</button>
+<script>
+(function () {
+  var top = document.getElementById('totop');
+  var nav = document.querySelector('nav.top');
+  var burger = document.querySelector('.burger');
+  var mnav = document.getElementById('mnav');
+  var scrim = document.getElementById('mscrim');
+  var prog = document.getElementById('progress');
+  function setNavh() {
+    if (nav) document.documentElement.style.setProperty('--navh', nav.offsetHeight + 'px');
+  }
+  function isOpen() { return mnav && !mnav.hasAttribute('hidden'); }
+  function openMenu() {
+    if (!mnav) return;
+    mnav.removeAttribute('hidden'); if (scrim) scrim.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+    mnav.querySelector('a').focus();
+  }
+  function closeMenu(refocus) {
+    if (!mnav || mnav.hasAttribute('hidden')) return;
+    mnav.setAttribute('hidden', ''); if (scrim) scrim.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    if (burger) { burger.setAttribute('aria-expanded', 'false'); if (refocus) burger.focus(); }
+  }
+  if (burger && mnav) {
+    burger.addEventListener('click', function () { isOpen() ? closeMenu(true) : openMenu(); });
+    if (scrim) scrim.addEventListener('click', function () { closeMenu(true); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && isOpen()) closeMenu(true); });
+    mnav.addEventListener('click', function (ev) {
+      var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      ev.preventDefault();
+      var id = a.getAttribute('href').slice(1);
+      closeMenu(false);
+      requestAnimationFrame(function () { var t = document.getElementById(id); if (t) t.scrollIntoView({ block: 'start' }); });
+    });
+    window.addEventListener('resize', function () { if (isOpen()) closeMenu(false); });
+  }
+  function onScroll() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var y = window.pageYOffset || h.scrollTop;
+    if (prog) prog.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    if (top) top.classList.toggle('on', y > 900);
+  }
+  setNavh();
+  window.addEventListener('resize', setNavh);
+  window.addEventListener('load', setNavh);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+  if (top) top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>

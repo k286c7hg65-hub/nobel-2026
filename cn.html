@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>华人科学奖 · 9 位华裔诺贝尔科学奖得主（1957–2015）｜Chinese descent &amp; the Nobel sciences</title>
+<meta name="description" content="1957 至 2015 年，华裔（中国血统）的诺贝尔物理学、化学、生理学或医学奖得主共 9 位。名单、年份、奖项、获奖时所属机构与官方获奖理由取自诺贝尔奖官方数据；「为何在名单里」逐人附官方原文；口径与边界（出生地≠族裔≠国籍）在页内写清。">
+<meta name="theme-color" content="#00263e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2300263e'/%3E%3Ccircle cx='16' cy='16' r='6.4' fill='%23cea152'/%3E%3Ccircle cx='16' cy='16' r='10.6' fill='none' stroke='%23cea152' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+
+  /* ── 设计令牌：取自诺贝尔奖官网样式表本身（--nobel-gold / --berlin-blue / --dune / --jumbo / --lochMara / --very-light-grey） ── */
+  :root{
+    --navy:#00263e;          /* berlin-blue */
+    --navy-soft:#0b3a58;
+    --gold:#cea152;          /* nobel-gold-500 */
+    --gold-deep:#8e6518;     /* roti —— 金色系里对比度够正文用的一档 */
+    --blue:#2370b8;          /* lochMara —— 「光」的颜色 */
+    --ink:#2e2a25;           /* dune */
+    --ink-2:#5d5b58;         /* jumbo */
+    --ink-3:#6b6762;
+    --paper:#ffffff;
+    --paper-2:#f4f2f0;
+    --paper-3:#faf9f7;
+    --line:#e0ddd9;
+    --line-2:#efece8;
+    --radius:4px;
+    --radius-lg:6px;
+    --maxw:1120px;
+    --font-serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Songti SC","Noto Serif SC","Source Han Serif SC",serif;
+    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    --font-mono:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-sans);
+    font-size:16px; line-height:1.8; letter-spacing:.006em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+  a{color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(35,112,184,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+  .en{font-family:var(--font-serif); color:var(--ink-2)}
+  code{font-family:var(--font-mono); font-size:.86em; word-break:break-all}
+
+  /* ── 进度条 ── */
+  #progress{position:fixed; top:0; left:0; height:2px; width:0; background:var(--gold); z-index:60; transition:width .08s linear}
+
+  /* ── 导航 ── */
+  nav.top{position:sticky; top:0; z-index:50; background:var(--navy); color:#fff; border-bottom:1px solid rgba(255,255,255,.12)}
+  nav.top .inner{max-width:var(--maxw); margin:0 auto; padding:9px 22px; display:flex; align-items:center; gap:16px; justify-content:space-between}
+  nav.top .brand{font-family:var(--font-serif); font-size:16px; font-weight:600; letter-spacing:.01em; color:#fff; white-space:nowrap}
+  nav.top .brand b{color:var(--gold); font-weight:600}
+  nav.top .links{display:flex; gap:2px; flex-wrap:wrap}
+  nav.top .links a{color:rgba(255,255,255,.76); font-size:12.5px; padding:4px 10px; border-radius:var(--radius); border-bottom:none}
+  nav.top .links a:hover{color:#fff; background:rgba(255,255,255,.12)}
+  @media (max-width:720px){ nav.top .links{display:none} }
+
+  /* ── hero ── */
+  header.hero{background:var(--navy); color:#fff; padding:52px 0 46px; position:relative; overflow:hidden}
+  header.hero::after{content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px; border-radius:50%;
+    border:1px solid rgba(206,161,82,.24); box-shadow:0 0 0 60px rgba(206,161,82,.05)}
+  header.hero .wrap{position:relative; z-index:1}
+  .eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+  .eyebrow::before{content:""; width:26px; height:1px; background:var(--gold)}
+  h1{font-family:var(--font-serif); font-size:clamp(29px,6vw,50px); line-height:1.2; letter-spacing:-.01em; margin:20px 0 6px; font-weight:600; color:#fff}
+  h1 .sub{display:block; font-size:clamp(15px,3.2vw,21px); color:var(--gold); font-weight:400; margin-top:12px; letter-spacing:.01em}
+  .hero-lede{color:rgba(255,255,255,.86); max-width:44em; margin:18px 0 6px; font-size:15.5px}
+  .hero-lede .en{display:block; color:rgba(255,255,255,.62); font-size:14px; margin-top:8px; font-style:italic}
+  .hero-meta{display:flex; flex-wrap:wrap; gap:8px 24px; margin-top:26px; padding-top:16px; border-top:1px solid rgba(255,255,255,.16); font-size:13px; color:rgba(255,255,255,.7)}
+  .hero-meta b{color:#fff; font-weight:500}
+  .hero-meta .en{color:rgba(255,255,255,.6)}
+
+  /* ── 时间轴 ── */
+  section.tl{padding:38px 0 8px}
+  .sec-label{margin:0 0 20px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+  .sec-label .lab{display:block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep)}
+  .sec-label .zh{display:block; font-size:17px; font-weight:600; letter-spacing:.01em; color:var(--ink); margin-top:4px}
+  .tl-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:0; border-top:2px solid var(--navy)}
+  .tl-node{padding:16px 12px 18px 0; position:relative}
+  .tl-node .bar{position:absolute; top:-2px; left:0; right:12px; height:2px; background:var(--navy)}
+  .tl-node.done .bar{background:var(--gold)}
+  .tl-node .d{font-family:var(--font-mono); font-size:12px; color:var(--ink-3); letter-spacing:.02em}
+  .tl-node .zh{font-size:15px; font-weight:600; margin-top:3px; color:var(--ink)}
+  .tl-node .en{font-family:var(--font-serif); font-size:12.5px; color:var(--ink-3); line-height:1.4}
+  .tl-node .st{font-size:11.5px; color:var(--ink-3); margin-top:5px}
+  .tl-node.done .st{color:var(--gold-deep)}
+  .tl-node.today .zh{color:var(--navy)}
+  .tl-node.today .st{color:var(--blue); font-weight:600}
+  @media (max-width:720px){
+    .tl-grid{grid-template-columns:1fr; border-top:none}
+    .tl-node{padding:0 0 14px 20px; border-left:2px solid var(--line-2)}
+    .tl-node .bar{display:none}
+    .tl-node.done{border-left-color:var(--gold)}
+    .tl-node .d,.tl-node .zh,.tl-node .en,.tl-node .st{display:inline-block; margin-right:8px}
+    .tl-node .zh{margin-top:0}
+  }
+
+  /* ── 说明块 ── */
+  .notice{background:var(--paper-3); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:var(--radius); padding:18px 20px; margin:18px 0 40px}
+  .notice p{margin:0 0 10px; font-size:14.6px; color:var(--ink-2)}
+  .notice p:last-child{margin-bottom:0}
+  .notice b{color:var(--ink)}
+  .notice .en{display:block; font-size:13.6px; color:var(--ink-3); margin-top:6px; font-style:italic; border-left:2px solid var(--line-2); padding-left:10px}
+
+  /* ── 奖卡 ── */
+  article.prize{border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--paper); margin-bottom:34px; overflow:hidden}
+  article.prize > .top{padding:26px 26px 24px; background:var(--navy); color:#fff; border-bottom:3px solid var(--gold)}
+  .cat{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px}
+  .cat .zh{font-size:13px; font-weight:600; color:var(--navy); background:var(--gold); padding:3px 11px; border-radius:2px; letter-spacing:.04em}
+  .cat .en{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.68)}
+  .cat .date{font-size:12.5px; color:rgba(255,255,255,.62); margin-left:auto}
+  article.prize h2{font-family:var(--font-serif); font-size:clamp(21px,4.4vw,31px); line-height:1.32; margin:18px 0 4px; font-weight:600; letter-spacing:-.005em; color:#fff}
+  article.prize h2 .sub{display:block; font-size:clamp(14px,2.8vw,17px); color:var(--gold); font-style:italic; font-weight:400; margin-top:8px}
+  .cite{margin:20px 0 0; padding:16px 18px; background:rgba(255,255,255,.08); border-left:3px solid var(--gold); border-radius:0 var(--radius) var(--radius) 0}
+  .cite .en{font-size:16px; font-style:italic; color:#fff; line-height:1.7}
+  .cite .zh{font-size:14.5px; color:rgba(255,255,255,.9); margin-top:9px}
+  .cite .tag{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:9px}
+
+  article.prize > .body{padding:26px}
+  h3.sec{margin:0 0 16px; padding-bottom:10px; border-bottom:1px solid var(--line-2)}
+  h3.sec .lab{display:block; font-family:var(--font-mono); font-size:11.5px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-deep)}
+  h3.sec .zh{display:block; font-size:16.5px; letter-spacing:.015em; color:var(--ink); font-weight:600; margin-top:4px}
+  h3.sec:not(:first-child){margin-top:32px}
+  .lead{font-size:16.5px; color:var(--ink); margin:0 0 8px}
+  .lead-en{font-family:var(--font-serif); font-style:italic; font-size:14.8px; color:var(--ink-2); margin:0 0 4px; border-left:2px solid var(--gold); padding-left:12px}
+
+  ol.chain{list-style:none; counter-reset:c; margin:0; padding:0}
+  ol.chain li{counter-increment:c; position:relative; padding:0 0 18px 40px; font-size:15.4px; color:var(--ink-2)}
+  ol.chain li::before{content:counter(c,decimal-leading-zero); position:absolute; left:0; top:3px;
+    font-family:var(--font-mono); font-size:11.5px; font-weight:600; color:var(--gold-deep);
+    border:1px solid var(--gold); border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; background:var(--paper)}
+  ol.chain li::after{content:""; position:absolute; left:13px; top:31px; bottom:3px; width:1px; background:var(--line-2)}
+  ol.chain li:last-child{padding-bottom:0}
+  ol.chain li:last-child::after{display:none}
+  ol.chain b{color:var(--ink); font-weight:600}
+  ol.chain .en-inline{display:block; margin-top:5px; font-family:var(--font-serif); font-style:italic; font-size:13.8px; line-height:1.6; color:var(--ink-3); border-left:2px solid var(--line-2); padding-left:10px}
+
+  .cols{display:grid; grid-template-columns:1.5fr 1fr; gap:34px; align-items:start}
+  @media (max-width:920px){ .cols{grid-template-columns:1fr; gap:26px} }
+
+  .why p{color:var(--ink-2); font-size:15.4px; margin:0 0 12px}
+  .why p:last-child{margin-bottom:0}
+  .why b{color:var(--ink)}
+
+  .people{display:grid; gap:12px}
+  .person{border:1px solid var(--line); border-radius:var(--radius); padding:14px 15px; background:var(--paper-3)}
+  .person .nm{font-size:15.5px; font-weight:700; color:var(--navy); letter-spacing:-.005em}
+  .person .nm .zh{font-weight:500; color:var(--ink-2); font-size:13.5px; margin-left:6px}
+  .person .aff{font-size:13.4px; color:var(--ink-2); margin-top:7px; line-height:1.65}
+  .person .aff .en{font-family:var(--font-serif); font-size:12.8px; color:var(--ink-3); display:block}
+  .person .bio{font-family:var(--font-mono); font-size:11.8px; color:var(--ink-3); margin-top:6px}
+
+  .facts{display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px}
+  .fact{background:var(--paper-2); border-radius:var(--radius); padding:13px 14px; border:1px solid var(--line-2)}
+  .fact .n{font-family:var(--font-serif); font-size:clamp(20px,4.2vw,25px); font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:-.01em}
+  .fact .l{font-size:12.6px; color:var(--ink-2); margin-top:6px; line-height:1.55}
+  .fact .l .en{display:block; font-size:11.6px; color:var(--ink-3); font-style:italic}
+
+  figure{margin:30px 0 0}
+  figure svg{width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2)}
+  ul.figlegend{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:8px 20px; grid-template-columns:repeat(3,1fr)}
+  ul.figlegend.two{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:760px){ ul.figlegend, ul.figlegend.two{grid-template-columns:1fr} }
+  ul.figlegend li{font-size:13.8px; color:var(--ink-2); line-height:1.65; position:relative; padding-left:26px}
+  ul.figlegend li .mk{position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:50%;
+    font-family:var(--font-mono); font-size:10.5px; font-weight:600; display:flex; align-items:center; justify-content:center;
+    background:var(--paper); color:var(--gold-deep); border:1px solid var(--gold)}
+  ul.figlegend li .mk.gold{background:var(--gold); color:#fff; border-color:var(--gold)}
+  ul.figlegend li .mk.blue{background:var(--blue); color:#fff; border-color:var(--blue); border-radius:3px}
+  figcaption{font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7}
+  figcaption .en{display:block; margin-top:5px; font-style:italic; color:var(--ink-3); font-size:13px}
+
+  .srcs{margin-top:24px; padding-top:16px; border-top:1px solid var(--line-2); font-size:13.2px; color:var(--ink-3); line-height:1.95}
+  .srcs .k{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:6px}
+  .srcs a{border-bottom-color:rgba(35,112,184,.3)}
+
+  /* ── 待揭晓 ── */
+  .wait-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(238px,1fr)); gap:16px}
+  .wait{border:1px dashed var(--line); border-radius:var(--radius-lg); padding:20px; background:var(--paper-3)}
+  .wait .cat .zh{background:transparent; color:var(--ink-2); border:1px solid var(--line); padding:2px 9px}
+  .wait .cat .en{color:var(--ink-3)}
+  .wait h2{font-family:var(--font-serif); font-size:20px; color:var(--ink-2); margin:12px 0 2px; font-weight:600}
+  .wait .sub{font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--ink-3)}
+  .wait p{font-size:13.6px; color:var(--ink-3); margin:12px 0 0; line-height:1.7}
+  .wait .stamp{display:inline-block; margin-top:14px; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); border:1px solid var(--line); border-radius:999px; padding:3px 10px}
+
+  footer{margin-top:44px; padding:30px 0 60px; border-top:2px solid var(--navy); color:var(--ink-3); font-size:13px}
+  footer h3{font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); margin:0 0 12px}
+  footer p{margin:0 0 8px; line-height:1.8}
+  footer b{color:var(--ink-2)}
+  footer .en{color:var(--ink-3); font-size:12.4px}
+
+  @media (prefers-reduced-motion: no-preference){
+    .pulse{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.3} 50%{opacity:1}}
+  }
+  @media print{
+    nav.top,#progress{display:none}
+    article.prize{break-inside:avoid; box-shadow:none}
+    header.hero{background:#fff; color:var(--ink)}
+    header.hero h1,header.hero .eyebrow,header.hero .hero-lede,header.hero .hero-meta{color:var(--ink)}
+  }
+
+  /* ══════════ v4 新增：导航 / 目录 / 官方图集 / 影像 / 授权 ══════════ */
+
+  /* 导航（品牌改为链接；窄屏改为可横向滚动，不再直接隐藏） */
+  nav.top .brand{border-bottom:none}
+  nav.top .links a.on{color:#fff; background:rgba(255,255,255,.18)}
+  /* 「三」按钮：桌面隐藏，手机显示 */
+  nav.top .burger{display:none; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+    width:44px; height:44px; margin-left:auto; padding:0; border:0; border-radius:var(--radius);
+    background:transparent; cursor:pointer}
+  nav.top .burger .bg-bar{display:block; width:19px; height:2px; background:#fff; border-radius:2px;
+    transition:transform .18s ease, opacity .18s ease}
+  nav.top .burger[aria-expanded="true"]{background:rgba(255,255,255,.14)}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(2){opacity:0}
+  nav.top .burger[aria-expanded="true"] .bg-bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* 满屏面板（位置/尺寸照 nobelprize.org 手机端：紧贴顶栏下方，占满剩余全屏，面板内滚动） */
+  .mscrim{position:fixed; inset:0; background:rgba(0,0,0,.42); z-index:48}
+  .mnav{position:fixed; left:0; right:0; top:var(--navh); bottom:0; z-index:49;
+    background:#fff; overflow-y:auto; -webkit-overflow-scrolling:touch;
+    box-shadow:0 18px 40px rgba(0,0,0,.18)}
+  .mnav[hidden]{display:none}
+  .mnav-in{padding:6px 0 22px}
+  .mnav-k{margin:14px 18px 8px; font-size:11px; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-3)}
+  .mnav-k .en{font-weight:400; font-style:italic; letter-spacing:0; text-transform:none}
+  a.mhall, .mdet > summary{display:flex; align-items:center; gap:10px; box-sizing:border-box;
+    min-height:56px; padding:14px 18px; font-size:16.5px; font-weight:600; color:var(--ink);
+    border-bottom:1px solid var(--line-2); border-top:none}
+  a.mhall b, .mdet > summary b{font-family:var(--font-mono); font-size:11.6px; font-weight:700;
+    color:var(--gold-deep); min-width:20px}
+  a.mhall .s, .mdet > summary .s{margin-left:auto; font-size:12.4px; font-weight:400;
+    color:var(--ink-3); text-align:right; max-width:46%}
+  a.mhall:active, .mdet > summary:active{background:var(--paper-2)}
+  .mdet > summary{list-style:none; cursor:pointer}
+  .mdet > summary::-webkit-details-marker{display:none}
+  .mdet > summary::after{content:"▾"; margin-left:8px; color:var(--gold-deep); font-size:13px}
+  .mdet[open] > summary::after{content:"▴"}
+  .msub{background:var(--paper-2); border-bottom:1px solid var(--line-2)}
+  .msub a{display:flex; align-items:center; min-height:44px; padding:10px 18px 10px 48px;
+    font-size:14.4px; color:var(--ink-2); border-bottom:1px solid var(--line)}
+  .msub a:last-child{border-bottom:none}
+  .msub a.mhall-top{font-weight:600; color:var(--gold-deep); padding-left:18px}
+  .mnav-ft{margin:16px 18px 0; font-size:12px; color:var(--ink-3); line-height:1.7}
+
+  /* 展线目录：手机端默认折成单行（不换行、不藏内容） */
+  .sm-toggle{display:none; align-items:center; gap:6px; min-height:44px; padding:8px 14px;
+    margin-left:auto; font-size:13.6px; font-weight:600; color:var(--ink);
+    background:var(--paper); border:1px solid var(--line); border-radius:999px; cursor:pointer}
+  .sm-toggle .car{color:var(--gold-deep); font-size:12px}
+  .sm-toggle.on .car{transform:rotate(180deg)}
+
+  @media (max-width:720px){
+    /* 顶栏：单行 68px（logo + 「三」），不再有横向滚动行 */
+    nav.top .inner{flex-direction:row; align-items:center; gap:10px; padding:0 14px; height:68px}
+    nav.top .brand{font-size:15px; text-align:left; white-space:nowrap; overflow:hidden;
+      text-overflow:ellipsis}
+    nav.top .links{display:none}
+    nav.top .burger{display:flex}
+
+    /* 展线目录：单行 + 展开按钮 */
+    .storymap{flex-wrap:nowrap; gap:8px; padding:10px 12px}
+    .storymap .k{flex:0 0 auto}
+    .sm-toggle{display:inline-flex}
+    .sm-list{display:none}
+    .sm-list.open{display:block; width:100%; margin-top:6px}
+    .sm-list.open a{display:flex; align-items:center; gap:8px; min-height:44px; padding:10px 12px;
+      border-radius:var(--radius); background:var(--paper); border:1px solid var(--line);
+      margin-bottom:5px; font-size:14px; color:var(--ink-2)}
+    .sm-list.open a b{font-family:var(--font-mono); font-size:11px; color:var(--gold-deep)}
+  }
+  @media (min-width:721px){
+    .sm-list{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    nav.top .burger .bg-bar{transition:none}
+  }
+
+  /* 目录 */
+  section.toc{background:var(--paper-3); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:22px 24px 24px; margin:26px 0 34px}
+  section.toc .sec-label{border-bottom:none; margin-bottom:8px; padding-bottom:0}
+  .toc-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:0 30px}
+  a.toc-item{display:flex; align-items:baseline; gap:11px; padding:11px 0 9px;
+    border-bottom:1px solid var(--line-2); border-radius:0}
+  a.toc-item .n{font-family:var(--font-mono); font-size:11px; font-weight:600; color:var(--gold-deep); flex:none; width:18px}
+  a.toc-item .t{font-size:14.8px; font-weight:600; color:var(--ink); line-height:1.5}
+  a.toc-item .d{font-size:12.2px; color:var(--ink-3); margin-left:auto; text-align:right; white-space:nowrap}
+  a.toc-item:hover .t{color:var(--blue)}
+  .toc-sub{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px 29px}
+  .toc-sub a{font-size:11.8px; color:var(--ink-2); border:1px solid var(--line); background:var(--paper);
+    border-radius:999px; padding:2px 9px; line-height:1.6}
+  .toc-sub a:hover{border-color:var(--blue); color:var(--blue)}
+
+  /* 官方图集 */
+  .figs{display:grid; gap:30px; margin-top:4px}
+  figure.fig{margin:0 !important}
+  figure.fig a{border-bottom:none; display:block}
+  figure.fig img{width:100%; height:auto; display:block; border:1px solid var(--line);
+    border-radius:var(--radius); background:var(--paper-2)}
+  figure.fig.tall img{width:auto; max-width:100%; max-height:74vh; margin:0 auto}
+  figure.fig .meta{margin-top:10px}
+  figure.fig .look{font-size:14.2px; color:var(--ink-2); line-height:1.78}
+  figure.fig .look b{color:var(--navy); font-weight:600}
+  figure.fig .off{font-family:var(--font-serif); font-style:italic; font-size:12.8px;
+    color:var(--ink-3); margin-top:7px; line-height:1.65}
+  figure.fig .cr{font-family:var(--font-mono); font-size:10.8px; color:var(--ink-3);
+    margin-top:6px; line-height:1.5}
+  figure.fig .cr span{border-left:2px solid var(--gold); padding-left:8px}
+
+  /* 进阶图表折叠 */
+  details.adv{margin-top:26px; border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--paper-3); padding:0 18px}
+  details.adv summary{cursor:pointer; padding:15px 0; font-size:14.6px; font-weight:600;
+    color:var(--navy); list-style:none}
+  details.adv summary::-webkit-details-marker{display:none}
+  details.adv summary::before{content:"＋"; font-family:var(--font-mono); color:var(--gold-deep); margin-right:9px}
+  details.adv[open] summary::before{content:"－"}
+  details.adv .inner{padding:0 0 20px}
+
+  /* 得主卡（带官方肖像） */
+  .people{display:grid; gap:12px}
+  .person{border:1px solid var(--line); border-radius:var(--radius); padding:13px;
+    background:var(--paper-3); display:grid; grid-template-columns:74px 1fr; gap:13px; align-items:start}
+  .person .ph{width:74px; height:auto; display:block; border:1px solid var(--line);
+    border-radius:3px; background:var(--paper-2)}
+  .person .pcr{font-family:var(--font-mono); font-size:9.4px; color:var(--ink-3);
+    margin-top:5px; line-height:1.42}
+  .person .nm{margin-top:1px}
+  @media (max-width:420px){ .person{grid-template-columns:62px 1fr; gap:11px}
+    .person .ph{width:62px} }
+
+  /* 官方影像 */
+  .vids{display:grid; gap:10px; margin-top:4px}
+  a.vid{display:grid; grid-template-columns:34px 1fr auto; gap:13px; align-items:center;
+    padding:13px 15px; border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--paper-3)}
+  a.vid .play{width:32px; height:32px; border-radius:50%; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:11px; padding-left:2px}
+  a.vid .t{display:block; font-size:14.4px; font-weight:600; color:var(--ink); line-height:1.5}
+  a.vid .s{display:block; font-size:12.4px; color:var(--ink-3); margin-top:4px; line-height:1.6}
+  a.vid .ext{font-family:var(--font-mono); font-size:10.4px; color:var(--ink-3);
+    letter-spacing:.06em; white-space:nowrap}
+  a.vid:hover{border-color:var(--blue); background:var(--paper)}
+  a.vid:hover .t{color:var(--blue)}
+  @media (max-width:520px){ a.vid{grid-template-columns:30px 1fr}
+    a.vid .ext{grid-column:2; margin-top:4px} }
+
+  /* 授权条款 */
+  section.rights{margin-top:46px}
+  .terms{display:grid; gap:16px; margin-top:6px}
+  .term{border-left:3px solid var(--gold); padding:2px 0 2px 15px}
+  .term .tt{font-size:14.6px; font-weight:600; color:var(--navy); margin-bottom:6px}
+  .term .en{font-family:var(--font-serif); font-style:italic; font-size:13.2px;
+    color:var(--ink-2); line-height:1.72}
+  .term .zh{font-size:13.6px; color:var(--ink-2); margin-top:6px; line-height:1.8}
+  .term .zh b{color:var(--ink)}
+
+  /* 回到目录悬浮按钮 */
+  #toTop{position:fixed; right:16px; bottom:16px; z-index:55; width:44px; height:44px;
+    border-radius:50%; background:var(--navy); color:#fff; border:1px solid rgba(255,255,255,.22);
+    display:none; align-items:center; justify-content:center; cursor:pointer;
+    box-shadow:0 6px 22px rgba(0,38,62,.3); font-size:15px; font-family:var(--font-sans)}
+  #toTop.show{display:flex}
+  #toTop:hover{background:var(--navy-soft)}
+
+  section.pending{margin-top:10px}
+  @media print{ #toTop{display:none !important}
+    section.toc{break-inside:avoid} figure.fig{break-inside:avoid} }
+
+  /* ══════════ v4 修正：锚点偏移 / 手机端目录换行 / 关键数字通栏 ══════════ */
+
+  /* 锚点落点停在吸顶导航下方（导航高 50px 桌面 / 87px 手机，实测）
+     —— 不加这条，点目录跳过去标题会被导航盖住 */
+  :root{--navh:64px}
+  section, article.prize, footer, h2, h3, h4, figure, details{
+    scroll-margin-top:calc(var(--navh) + 18px)}
+
+  /* 手机端目录：编号 + 标题一行，右侧说明另起一行，避免中文被挤断 */
+  @media (max-width:560px){
+    a.toc-item{display:grid; grid-template-columns:18px 1fr; gap:3px 11px; align-items:baseline}
+    a.toc-item .t{font-size:14.4px}
+    a.toc-item .d{grid-column:2; margin-left:0; text-align:left; white-space:normal; font-size:12px}
+    .toc-sub{margin-left:29px; gap:5px}
+  }
+
+  /* 关键数字：通栏放在两栏之后（11 组数字是这页的记忆锚点，值得占满一行） */
+  .facts-band{margin-top:30px}
+  .facts-band .facts{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .facts-band .fact .n{font-size:clamp(22px,5vw,30px)}
+  @media (max-width:560px){ .facts-band .facts{grid-template-columns:repeat(2,1fr)} }
+
+  /* 得主卡收紧：医学 3 位得主时卡片总高要与左栏「为什么重要」齐平（实测 695→约 400px） */
+  .person{padding:10px 12px; gap:12px; grid-template-columns:58px 1fr}
+  .person .ph{width:58px}
+  .person .nm{font-size:14.8px}
+  .person .nm .zh{font-size:12.8px; margin-left:5px}
+  .person .aff{font-size:12.7px; margin-top:5px; line-height:1.6}
+  .person .aff .en{font-size:12px}
+  .person .bio{font-size:11.2px; margin-top:5px; line-height:1.5}
+  .person .pcr{font-size:8.8px; margin-top:4px}
+  .people{gap:10px}
+
+  /* 目录条目：奖项名一行（不折行），完整标题另起一行，右侧元信息 */
+  a.toc-item .t{line-height:1.45}
+  a.toc-item .t .st{display:block; font-size:12.6px; font-weight:400; color:var(--ink-3); margin-top:2px}
+  /* 目录里的英文名称：第二层（斜体、小一号、弱色） */
+  a.toc-item .t .en{display:block; font-size:11.8px; font-weight:400; font-style:italic;
+    color:var(--gold-deep); margin-top:3px; letter-spacing:.01em}
+  /* 顶栏链接的英文名：第二层 */
+  /* 顶栏的英文名只在够宽时显示（中部平板宽度会让 6 项换行、把导航撑到 108px） */
+  nav.top .links a .en{display:none; font-size:9.8px; font-weight:400; font-style:italic;
+    color:rgba(255,255,255,.52); letter-spacing:.01em; line-height:1.35}
+  @media (min-width:1080px){ nav.top .links a .en{display:block} }
+  nav.top .links a.on .en{color:rgba(255,255,255,.78)}
+  /* 展线目录：手机端展开后显示官方英文原标题；桌面端胶囊保持紧凑，不显示 */
+  .sm-list a .sm-en{display:none; font-size:11px; font-style:italic; color:var(--ink-3);
+    line-height:1.45; margin-top:1px}
+  @media (max-width:720px){
+    .sm-list.open a{flex-direction:column; align-items:flex-start; gap:2px; min-height:44px}
+    .sm-list.open a .sm-zh{font-weight:600; color:var(--ink); font-size:14.4px}
+    .sm-list.open a .sm-en{display:block}
+  }
+  @media (max-width:560px){ a.toc-item .t .st{font-size:12.2px} }
+
+  /* 得主并排通栏（3 位以上得主的奖）：为何重要占满宽度，得主 3 幅肖像一行 */
+  article.prize .body > h3.sec + .why{max-width:56em}
+  .people.row{display:grid; grid-template-columns:repeat(auto-fit,minmax(292px,1fr)); gap:12px}
+  .people.row .person{grid-template-columns:58px 1fr}
+  @media (max-width:700px){ .people.row{grid-template-columns:1fr} }
+  /* 肖像署名移到卡片底部通栏，省掉窄列里的多行折行 */
+  .person .pcr{grid-column:1 / -1; margin-top:0; padding-top:6px;
+    border-top:1px solid var(--line-2); font-size:9.6px; line-height:1.4}
+
+  /* 人名与短标签不拆行（中文可在任意字间断行，人名被拆很难看） */
+  .person .nm, .person .nm .zh, .tl-node .zh, .wait h2{word-break:keep-all}
+  .person .nm .zh{white-space:nowrap}
+  @media (max-width:520px){ .person .nm .zh{display:block; margin-left:0; margin-top:2px} }
+
+  /* ── 博物馆层：展线正文（发现的故事）── */
+  .story{max-width:62em; margin-top:20px; counter-reset:chap}
+  .story .chap{position:relative; border-left:2px solid var(--gold); padding:0 0 2px 20px; margin:0 0 30px}
+  .story .chap:before{counter-increment:chap; content:counter(chap,decimal-leading-zero);
+    position:absolute; left:-30px; top:2px; width:22px; text-align:right;
+    font-size:10px; font-weight:700; letter-spacing:.06em; color:var(--gold-deep); font-variant-numeric:tabular-nums}
+  .story .chap h4{margin:0 0 8px}
+  .story .chap h4 .lab{display:block; font-size:9.8px; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--gold-deep); font-weight:700; line-height:1.5}
+  .story .chap h4 .zh{display:block; font-size:17.5px; line-height:1.45; font-weight:700; color:var(--ink)}
+  .story .chap p{margin:0 0 11px; font-size:15.4px; line-height:1.92; color:var(--ink-2)}
+  .story .chap p b{color:var(--ink)}
+  @media (max-width:560px){
+    .story .chap{padding-left:14px; margin-bottom:24px}
+    .story .chap:before{display:none}
+    .story .chap p{font-size:15px; line-height:1.9}
+  }
+
+  /* ── 术语小词典 ── */
+  dl.gloss{margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:12px}
+  dl.gloss .g{margin:0; background:var(--paper-2); border:1px solid var(--line-2);
+    border-left:3px solid var(--gold); border-radius:var(--radius); padding:12px 14px}
+  dl.gloss dt{font-size:15px; font-weight:700; color:var(--ink); line-height:1.5; margin-bottom:6px}
+  dl.gloss dt .en{display:block; font-size:11.6px; font-style:italic; font-weight:400; color:var(--ink-3); letter-spacing:.01em}
+  dl.gloss dd{margin:0; font-size:14.2px; line-height:1.82; color:var(--ink-2)}
+  dl.gloss dd b{color:var(--ink)}
+  dl.gloss .like{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line);
+    font-size:13.4px; line-height:1.75; color:var(--ink-2)}
+  dl.gloss .like .k{display:inline-block; margin-right:6px; padding:1px 6px; border-radius:2px;
+    background:var(--gold); color:var(--navy); font-size:10.4px; font-weight:700; letter-spacing:.05em; vertical-align:1px}
+
+  /* ── 想想看 ── */
+  ol.think{counter-reset:q; list-style:none; margin:16px 0 0; padding:0; max-width:62em}
+  ol.think li{counter-increment:q; position:relative; padding:11px 14px 11px 44px;
+    border-bottom:1px solid var(--line-2); font-size:15px; line-height:1.85; color:var(--ink-2)}
+  ol.think li b{color:var(--ink)}
+  ol.think li:before{content:"Q" counter(q); position:absolute; left:12px; top:11px;
+    font-family:var(--font-mono); font-size:11.6px; font-weight:700; color:var(--gold-deep)}
+  ol.think li:last-child{border-bottom:0}
+
+  /* ── 展线目录（每座展厅开头的章节导航）── */
+  .storymap{display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+    margin:0 0 22px; padding:10px 12px; background:var(--paper-2);
+    border:1px solid var(--line-2); border-radius:var(--radius)}
+  .storymap .k{font-size:10.6px; font-weight:700; letter-spacing:.12em; color:var(--gold-deep); margin-right:4px}
+  .storymap a{display:inline-flex; align-items:baseline; gap:5px; padding:3px 9px; border-radius:999px;
+    background:var(--paper); border:1px solid var(--line); font-size:12.6px; color:var(--ink-2)}
+  .storymap a b{font-family:var(--font-mono); font-size:10.4px; color:var(--gold-deep)}
+  .storymap a:hover{border-color:var(--gold); color:var(--ink); background:#fff}
+  @media (max-width:700px){
+    /* 手机不靠横向滑动：换成两列自动换行，十个章节一屏看得完，没有内容被藏起来 */
+    .storymap{gap:5px; padding:9px 10px}
+    .storymap .k{flex:0 0 100%; margin:0 0 3px}
+    .storymap a{flex:1 1 auto; min-width:132px; justify-content:flex-start}
+  }
+
+  /* ── 学科地图 ── */
+  .mapsec{margin-top:52px}
+  .mapgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:16px 0 12px}
+  .mapgrid .mcol{background:var(--paper-2); border:1px solid var(--line-2); border-top:3px solid var(--navy);
+    border-radius:var(--radius); padding:14px 16px}
+  .mapgrid .mh{font-size:16px; font-weight:700; color:var(--ink); margin-bottom:8px; line-height:1.4}
+  .mapgrid .mh .en{display:block; font-size:11.4px; font-style:italic; font-weight:400; color:var(--ink-3)}
+  .mapgrid p{margin:0; font-size:14.4px; line-height:1.85; color:var(--ink-2)}
+  .mapgrid p b{color:var(--ink)}
+  p.map-note{max-width:62em; font-size:13.6px; line-height:1.85; color:var(--ink-2);
+    background:rgba(206,161,82,.12); border-left:3px solid var(--gold);
+    padding:10px 14px; border-radius:0 var(--radius) var(--radius) 0}
+
+
+
+
+  /* ── 日本科学奖页 ── */
+  nav.top .links a.on{color:#fff; background:rgba(255,255,255,.16)}
+  .mhall.on{background:var(--paper-2); border-color:var(--gold)}
+  .jp-hero{padding:40px 0 6px}
+  .jp-hero h1{font-family:var(--font-serif); font-size:clamp(26px,4.4vw,38px); line-height:1.24;
+    margin:0 0 12px; color:var(--navy); letter-spacing:-.01em}
+  .jp-hero h1 .en{display:block; font-size:clamp(13px,1.7vw,15px); letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold-deep); font-family:var(--font-mono); margin-bottom:10px}
+  .jp-hero p{font-size:15.4px; color:var(--ink-2); max-width:74ch; margin:0 0 10px}
+  .jp-tl{background:var(--paper-3); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:20px 18px 8px; margin:0 0 14px}
+  .jp-tl svg{width:100%; height:auto; display:block}
+  .jp-legend{display:flex; flex-wrap:wrap; gap:14px 22px; margin:6px 0 0; padding:0 4px 10px}
+  .jp-legend span{font-size:12.8px; color:var(--ink-2); display:inline-flex; align-items:center; gap:7px}
+  .jp-legend i{width:10px; height:10px; border-radius:50%; display:inline-block}
+  .jp-people{display:grid; grid-template-columns:repeat(auto-fit,minmax(430px,1fr)); gap:12px; margin-top:6px}
+  .jp-card{border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-3); padding:14px 15px;
+    display:grid; grid-template-columns:132px 1fr; gap:14px; align-items:start}
+  .jp-ph{margin:0}
+  .jp-ph img{width:132px; height:198px; display:block; border:1px solid var(--line);
+    border-radius:3px; background:var(--paper-2); object-fit:contain}
+  .jp-ph figcaption{font-family:var(--font-mono); font-size:9.6px; line-height:1.45; color:var(--ink-3);
+    margin-top:6px; max-width:132px}
+  .jp-card .jp-ach{margin:9px 0 0; font-size:13.6px; line-height:1.78; color:var(--ink)}
+  .jp-card .jp-lbl{display:block; font-family:var(--font-mono); font-size:10.4px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--gold-deep); margin-bottom:3px}
+  .jp-card .jp-en{margin:10px 0 0; border-top:1px solid var(--line-2); padding-top:8px}
+  .jp-card .jp-en summary{font-size:12.4px; color:var(--ink-2); cursor:pointer}
+  .jp-card .jp-en summary .en{font-family:var(--font-serif); color:var(--ink-3); margin-left:6px}
+  .jp-card .jp-en p{margin:8px 0 0; font-size:12.6px; line-height:1.72; color:var(--ink-2)}
+  .jp-card .jp-srcline{font-size:11.6px; color:var(--ink-3)}
+  @media (max-width:520px){
+    .jp-people{grid-template-columns:1fr}
+    .jp-card{grid-template-columns:104px 1fr; gap:11px}
+    .jp-ph img{width:104px; height:156px}
+    .jp-ph figcaption{max-width:104px; font-size:9px}
+  }
+  .jp-card .jp-y{display:flex; align-items:baseline; justify-content:space-between; font-family:var(--font-mono);
+    font-size:12.5px; color:var(--ink-3); letter-spacing:.04em}
+  .jp-card .jp-y b{font-size:14.5px; color:var(--ink)}
+  .jp-card .jp-cat{font-size:12.5px}
+  .jp-card .jp-nm{font-size:16px; margin:6px 0 0; font-weight:700; color:var(--navy)}
+  .jp-card .jp-nm .en{display:block; font-family:var(--font-serif); font-size:13.2px; font-weight:400; color:var(--ink-3); margin-top:2px}
+  .jp-card .jp-aff{font-size:13.4px; color:var(--ink-2); margin:8px 0 0; line-height:1.6}
+  .jp-card .jp-affen{display:block; font-family:var(--font-mono); font-size:11.4px; color:var(--ink-3); margin-top:2px}
+  .jp-card .jp-place{display:block; font-size:12px; color:var(--ink-3); margin-top:3px}
+  .jp-card .jp-mot{margin:9px 0 0; font-size:12.8px; line-height:1.62; color:var(--ink-2)}
+  .jp-card .jp-mot .en{font-family:var(--font-serif); font-style:italic}
+  .jp-card .jp-links{margin:9px 0 0; display:flex; flex-wrap:wrap; gap:6px 12px; align-items:baseline}
+  .jp-card .jp-links a{font-size:12.2px}
+  .jp-card .jp-links a .en{display:block; font-size:11px; color:var(--ink-3)}
+  .jp-card .jp-born{font-family:var(--font-mono); font-size:11.2px; color:var(--ink-3)}
+  .jp-affgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(258px,1fr)); gap:10px; margin-top:6px}
+  .jp-affcard{border:1px solid var(--line-2); border-radius:var(--radius); padding:12px 14px; background:var(--paper)}
+  .jp-affhead{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .jp-affhead b{font-size:14.6px; color:var(--navy)}
+  .jp-affn{font-family:var(--font-mono); font-size:11.6px; color:var(--gold-deep)}
+  .jp-afflist{font-size:13.2px; color:var(--ink-2); margin-top:7px; line-height:1.75}
+  .jp-q{background:var(--paper-3); border:1px solid var(--line); border-left:3px solid var(--blue);
+    border-radius:var(--radius); padding:16px 18px; margin:14px 0}
+  .jp-q h3{margin:0 0 8px; font-size:15.6px; color:var(--navy)}
+  .jp-q p{margin:0 0 8px; font-size:14.4px; color:var(--ink-2)}
+  .jp-q p:last-child{margin-bottom:0}
+  .jp-obs{font-size:12.6px; color:var(--ink-3); font-style:normal}
+  @media (max-width:720px){
+    .jp-tl{padding:14px 10px 4px}
+    .jp-hero{padding:26px 0 4px}
+  }
+
+
+
+  /* ── 华人科学奖页 ── */
+  nav.top .links a.on{color:#fff; background:rgba(255,255,255,.16)}
+  .cn-hero{padding:40px 0 6px}
+  .cn-hero h1{font-family:var(--font-serif); font-size:clamp(26px,4.4vw,38px); line-height:1.24;
+    margin:0 0 12px; color:var(--navy); letter-spacing:-.01em}
+  .cn-hero h1 .en{display:block; font-size:clamp(13px,1.7vw,15px); letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold-deep); font-family:var(--font-mono); margin-bottom:10px}
+  .cn-hero p{font-size:15.4px; color:var(--ink-2); max-width:74ch; margin:0 0 10px}
+  .cn-layers{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:11px; margin:12px 0 4px}
+  .cn-layer{border:1px solid var(--line); border-radius:var(--radius); padding:14px 15px; background:var(--paper-3)}
+  .cn-layer.on{border-color:var(--gold); box-shadow:0 0 0 1px var(--gold) inset}
+  .cn-layer h4{margin:0 0 6px; font-size:14.6px; color:var(--navy)}
+  .cn-layer .n{font-family:var(--font-mono); font-size:22px; color:var(--gold-deep); line-height:1.1}
+  .cn-layer p{margin:6px 0 0; font-size:13.2px; color:var(--ink-2); line-height:1.68}
+  .cn-tag{display:inline-block; font-family:var(--font-mono); font-size:10.4px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--gold-deep); border:1px solid var(--gold); border-radius:2px;
+    padding:1px 6px; margin-left:6px; vertical-align:1px}
+  .cn-card .cn-her{margin:10px 0 0; border-left:3px solid var(--gold); padding:2px 0 2px 11px; background:linear-gradient(90deg,rgba(206,161,82,.07),transparent 60%)}
+  .cn-roster{margin:12px 0 0; font-size:13.6px; line-height:1.86; color:var(--ink-2);
+    border:1px dashed var(--line-2); border-radius:var(--radius); padding:11px 14px; background:var(--paper)}
+  .cn-roster b{color:var(--navy)}
+  .cn-card .cn-heren{margin:0; font-family:var(--font-serif); font-size:13px; line-height:1.7; color:var(--ink); font-style:italic}
+  .cn-card .cn-herzh{margin:5px 0 0; font-size:12.6px; line-height:1.7; color:var(--ink-2)}
+  .cn-card .cn-herzh a{font-size:12px}
+  .cn-tl{background:var(--paper-3); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:20px 18px 8px; margin:0 0 14px}
+  .cn-tl svg{width:100%; height:auto; display:block}
+  .cn-cmp{display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:11px; margin-top:8px}
+  .cn-cmpcard{border:1px solid var(--line-2); border-left:3px solid var(--ink-3); border-radius:var(--radius);
+    padding:13px 15px; background:var(--paper)}
+  .cn-cmpcard h4{margin:0 0 4px; font-size:14.6px; color:var(--ink)}
+  .cn-cmpcard .meta{font-family:var(--font-mono); font-size:11.6px; color:var(--ink-3); margin:0 0 7px}
+  .cn-cmpcard .q{margin:0 0 6px; font-family:var(--font-serif); font-style:italic; font-size:12.8px;
+    line-height:1.66; color:var(--ink-2)}
+  .cn-cmpcard .zh{margin:0; font-size:12.6px; line-height:1.7; color:var(--ink-2)}
+  @media (max-width:720px){ .cn-tl{padding:14px 10px 4px} .cn-hero{padding:26px 0 4px} }
+
+</style>
+</head>
+<body id="top">
+<div id="progress"></div>
+<nav class="top">
+  <div class="inner">
+    <a class="brand" href="index.html">2026 诺贝尔奖 <b>Nobel Prize</b></a>
+    <div class="links"><a href="index.html#schedule">总览<span class="en">Overview</span></a><a href="index.html#medicine">医学厅<span class="en">Physiology or Medicine</span></a><a href="index.html#physics">物理厅<span class="en">Physics</span></a><a href="index.html#chemistry">化学厅<span class="en">Chemistry</span></a><a href="index.html#literature">文学厅<span class="en">Literature</span></a><a href="index.html#peace">和平厅<span class="en">Peace</span></a><a href="jp.html">日本科学奖<span class="en">Born in Japan</span></a><a href="cn.html" class="on" aria-current="page">华人科学奖<span class="en">Chinese descent</span></a><a href="about.html">诺贝尔与基金会<span class="en">Nobel &amp; the Foundation</span></a><a href="index.html#sources">本馆说明<span class="en">About this page</span></a></div>
+    <button class="burger" type="button" aria-label="打开导航目录" aria-expanded="false" aria-controls="mnav"><span class="bg-bar"></span><span class="bg-bar"></span><span class="bg-bar"></span></button>
+  </div>
+</nav>
+<div class="mscrim" id="mscrim" hidden></div>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="导航" hidden>
+  <div class="mnav-in">
+    <p class="mnav-k">本页目录 <span class="en">On this page</span></p>
+    <a class="mhall" href="#scope">口径与证据<span class="s">Scope &amp; evidence</span></a>
+    <a class="mhall" href="#timeline">时间轴 58 年<span class="s">Timeline</span></a>
+    <a class="mhall" href="#cards">9 位得主<span class="s">The nine</span></a>
+    <a class="mhall" href="#compare">口径对照<span class="s">Born in China ≠ Chinese descent</span></a>
+    <a class="mhall" href="#observe">两个观察<span class="s">Two observations</span></a>
+    <a class="mhall" href="#srcs">来源<span class="s">Sources</span></a>
+    <p class="mnav-k">主站展厅 <span class="en">Halls of the main site</span></p>
+    <a class="mhall" href="index.html">00 总览<span class="s">Overview</span></a>
+    <a class="mhall" href="index.html#medicine">01 医学厅<span class="s">Physiology or Medicine</span></a>
+    <a class="mhall" href="index.html#physics">02 物理厅<span class="s">Physics</span></a>
+    <a class="mhall" href="index.html#chemistry">03 化学厅<span class="s">Chemistry</span></a>
+    <a class="mhall" href="index.html#literature">04 文学厅<span class="s">Literature</span></a>
+    <a class="mhall" href="index.html#peace">05 和平厅<span class="s">Peace</span></a>
+    <a class="mhall" href="jp.html"><b>08</b>日本科学奖<span class="s">Born in Japan · 27 laureates</span></a>
+    <a class="mhall on" href="cn.html" aria-current="page"><b>09</b>华人科学奖<span class="s">Chinese descent · 本页</span></a>
+    <a class="mhall" href="about.html"><b>10</b>诺贝尔与基金会<span class="s">Nobel &amp; the Foundation</span></a>
+    <a class="mhall" href="index.html#sources"><b>11</b>本馆说明<span class="s">About this page</span></a>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="cn-hero">
+    <h1><span class="en">Chinese descent &amp; the Nobel sciences</span>华人科学奖：9 位华裔得主<span class="en">1957 – 2015</span></h1>
+    <p>从 1957 年杨振宁、李政道拿下物理学奖，到 2015 年屠呦呦的生理学或医学奖——58 年间，华裔科学家在物理、化学、医学三个奖项上共得 <b>9 次</b>。这一页最难的部分不是排版，是<b>口径</b>：诺贝尔官方数据里既没有国籍字段，也没有族裔字段。</p>
+  </header>
+
+  <section id="facts" style="margin:26px 0 34px">
+    <div class="facts"><div class="fact"><div class="n">9</div><div class="l">华裔科学奖得主<span class="en">laureates of Chinese descent</span></div></div><div class="fact"><div class="n">1957 – 2015</div><div class="l">跨度 58 年<span class="en">the span</span></div></div><div class="fact"><div class="n">6 · 2 · 1</div><div class="l">物理 · 化学 · 医学<span class="en">by prize</span></div></div><div class="fact"><div class="n">6 : 3</div><div class="l">生于中国 : 生于美国<span class="en">born in China : in the USA</span></div></div><div class="fact"><div class="n">9</div><div class="l">张官方肖像（逐张署名）<span class="en">official portraits, each credited</span></div></div></div>
+  </section>
+
+  <section id="scope">
+    <h2 class="sec-label"><span class="lab">Scope &amp; evidence</span><span class="zh">先说口径 · 「华人」不是官方字段，所以这份名单必须自己交代清楚</span></h2>
+    <div class="layers cn-layers">
+      <div class="cn-layer"><div class="n">①</div><h4>出生地在中国 <span class="cn-tag">官方字段</span></h4>
+        <p>官方记录里可以机械筛出来的那一层：出生地所在国为 China / Taiwan。<b>共 9 人</b>——但其中 3 位不是华裔（见下方对照）。</p></div>
+      <div class="cn-layer on"><div class="n">②</div><h4>华裔（中国血统）<span class="cn-tag">本页采用</span></h4>
+        <p>不论出生地与国籍。共 <b>9 位</b>：6 位生于中国（含台湾），3 位生于美国，<b>屠呦呦在这 9 位之内</b>。每人「为何在名单里」都附官方原文，点开可核对。</p></div>
+      <div class="cn-layer"><div class="n">③</div><h4>中国公民 <span class="cn-tag">不采用</span></h4>
+        <p>官方数据里没有国籍字段，这一层无法机械判定；要写就必须逐人去查权威记录，且涉及多重国籍与入籍时点的争议。本页不做这一层。</p></div>
+    </div>
+        <p class="cn-roster"><b>这 9 位是（按年份）：</b>杨振宁（1957 物理） · 李政道（1957 物理） · 丁肇中（1976 物理） · 李远哲（1986 化学） · 朱棣文（1997 物理） · 崔琦（1998 物理） · 钱永健（2008 化学） · 高锟（2009 物理） · 屠呦呦（2015 医学）。</p>
+    <p class="cn-roster"><b>屠呦呦计入这 9 人之内</b>——她是 9 位里的第 9 位，不是追加的第 10 位；本页总数是 <b>9</b>，不是 10。若把「生于中国」那 3 位非华裔也算进来，数字会变成 12（9 + 3）——两种数字永远不用同一个口径，页内分别标明。</p>
+    <div class="notice">
+      <p><b>数据源：</b>诺贝尔奖官方接口（<code>api.nobelprize.org</code>），2026-10-10 拉取全部 1,026 位得主，逐条落盘。<span class="en">Source: the official Nobel Prize API, pulled 2026-10-10.</span></p>
+      <p><b>官方数据里没有「国籍」字段，也没有「族裔」字段。</b>所以第 ② 层不是官方字段筛出来的，而是本页的判定——判定的依据必须落到官方文本上（facts 页的 <span class="en">Life</span> 段，或得主本人的官方自传）。本页 9 位全都找得到这样的官方原文，逐条附在卡片里。</p>
+      <p><b>「获奖时所属机构」是另一回事</b>：它记的是诺贝尔官网当年登记的挂名单位，<b>既不等于国籍，也不等于长期工作地</b>。本页凡出现机构，一律标明是「获奖时」。</p>
+      <p><b>名字：</b>官方记录以英文名为准（<code>knownName.en</code>）；中文为通行译法，卡片同时给出官方英文名，便于与官方页面逐字对上。</p>
+      <p><b>本页的判断</b>：凡是本页自己的解释，都放在「两个观察」一节并明确标注<b>「本页观察，非诺贝尔委员会表述」</b>。官方从未把这 9 位放在一起解释过。</p>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2 class="sec-label"><span class="lab">Timeline</span><span class="zh">时间轴 · 58 年，9 个点（按真实年份比例）</span></h2>
+    <div class="cn-tl">
+      <svg viewBox="0 0 1000 226" role="img" aria-label="1957 至 2015 年，9 位华裔科学奖得主按年份与奖项分布的散点时间轴">
+      <line x1="60" y1="46.5" x2="974" y2="46.5" stroke="#efece8" stroke-width="1"/>
+      <text x="50" y="50.0" text-anchor="end" font-size="12.5" fill="#5d5b58" font-family="sans-serif">物理</text>
+      <line x1="60" y1="86.5" x2="974" y2="86.5" stroke="#efece8" stroke-width="1"/>
+      <text x="50" y="90.0" text-anchor="end" font-size="12.5" fill="#5d5b58" font-family="sans-serif">化学</text>
+      <line x1="60" y1="126.5" x2="974" y2="126.5" stroke="#efece8" stroke-width="1"/>
+      <text x="50" y="130.0" text-anchor="end" font-size="12.5" fill="#5d5b58" font-family="sans-serif">医学</text>
+      <circle cx="89.5" cy="46.0" r="5" fill="var(--navy)"><title>1957 · 物理学 · 杨振宁 Chen Ning Yang</title></circle>
+      <text x="98.5" y="50.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">杨振宁</text>
+      <circle cx="89.5" cy="59.0" r="5" fill="var(--navy)"><title>1957 · 物理学 · 李政道 Tsung-Dao Lee</title></circle>
+      <text x="98.5" y="63.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">李政道</text>
+      <circle cx="369.6" cy="46.0" r="5" fill="var(--navy)"><title>1976 · 物理学 · 丁肇中 Samuel C.C. Ting</title></circle>
+      <text x="378.6" y="50.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">丁肇中</text>
+      <circle cx="517.0" cy="86.0" r="5" fill="var(--gold-deep)"><title>1986 · 化学 · 李远哲 Yuan T. Lee</title></circle>
+      <text x="526.0" y="90.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">李远哲</text>
+      <circle cx="679.2" cy="46.0" r="5" fill="var(--navy)"><title>1997 · 物理学 · 朱棣文 Steven Chu</title></circle>
+      <text x="688.2" y="50.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">朱棣文</text>
+      <circle cx="693.9" cy="46.0" r="5" fill="var(--navy)"><title>1998 · 物理学 · 崔琦 Daniel C. Tsui</title></circle>
+      <text x="702.9" y="50.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">崔琦</text>
+      <circle cx="841.3" cy="86.0" r="5" fill="var(--gold-deep)"><title>2008 · 化学 · 钱永健 Roger Y. Tsien</title></circle>
+      <text x="850.3" y="90.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">钱永健</text>
+      <circle cx="856.1" cy="46.0" r="5" fill="var(--navy)"><title>2009 · 物理学 · 高锟 Charles K. Kao</title></circle>
+      <text x="865.1" y="50.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">高锟</text>
+      <circle cx="944.5" cy="126.0" r="5" fill="var(--blue)"><title>2015 · 生理学或医学 · 屠呦呦 Tu Youyou</title></circle>
+      <text x="953.5" y="130.0" font-size="11.5" fill="#5d5b58" font-family="sans-serif">屠呦呦</text>
+      <line x1="60" y1="196" x2="974" y2="196" stroke="#e0ddd9" stroke-width="1.4"/>
+      <line x1="89.5" y1="196" x2="89.5" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="89.5" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">1957</text>
+      <line x1="207.4" y1="196" x2="207.4" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="207.4" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">1965</text>
+      <line x1="354.8" y1="196" x2="354.8" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="354.8" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">1975</text>
+      <line x1="502.3" y1="196" x2="502.3" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="502.3" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">1985</text>
+      <line x1="649.7" y1="196" x2="649.7" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="649.7" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">1995</text>
+      <line x1="797.1" y1="196" x2="797.1" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="797.1" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">2005</text>
+      <line x1="944.5" y1="196" x2="944.5" y2="201" stroke="#e0ddd9" stroke-width="1.2"/>
+      <text x="944.5" y="215" text-anchor="middle" font-size="12" fill="#6b6762" font-family="monospace">2015</text>
+      </svg>
+      <div class="jp-legend">
+        <span><i style="background:var(--navy)"></i>物理学 6 位</span>
+        <span><i style="background:var(--gold-deep)"></i>化学 2 位</span>
+        <span><i style="background:var(--blue)"></i>生理学或医学 1 位</span>
+      </div>
+    </div>
+    <p class="lead">一眼能看出的事：<b>1957 年一次出了两位（杨振宁、李政道）</b>，此后近二十年空窗，1976 年丁肇中，再往后每隔几年一位。<b>物理学占了 6 位</b>，化学 2 位，医学 1 位。轴上的横坐标按真实年份等比例，不是均分。</p>
+  </section>
+
+  <section id="cards" style="margin-top:38px">
+    <h2 class="sec-label"><span class="lab">The nine</span><span class="zh">9 位得主 · 逐人卡片（按年份）</span></h2>
+    <p class="lead">每张卡的官方部分有<b>四层</b>：<b>肖像</b>（取自 nobelprize.org 官方得主页原图，署名行逐张保留，仅等比缩放、不裁切）＋ <b>中文成就介绍</b>（官方 Work 段的中文转述，里面每个数字都能在官方原文里找到）＋ <b>为何在名单里</b>（官方原文逐字引用，标明出自 facts 页或官方自传）＋ <b>官方获奖理由与 Work 段原文</b>（英文，点开可逐字核对）。</p>
+    <div class="jp-people">
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/yang-1957.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="杨振宁官方肖像（Chen Ning Yang，nobelprize.org）">
+        <figcaption>Photo: Alan W. Richards, Princeton University. Nobel Foundation archive</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1957</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">杨振宁<span class="en">Chen Ning Yang</span></h3>
+        <p class="jp-aff">普林斯顿高等研究院（美国新泽西州普林斯顿）<span class="jp-affen">Institute for Advanced Study, Princeton, NJ, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/2 · 生于 Hofei, Anhwei，中国</span></p>
+        <p class="jp-ach">物理学家长期假定自然界的各种对称性都成立：在一个左右互换、物质换成反物质的「镜像世界」里，物理规律应当一样。但某些基本粒子衰变的情形令这个前提受到质疑。1956 年，杨振宁与李政道提出理论：左右对称（宇称）在弱相互作用中并不成立；随后对钴同位素 β 衰变中电子运动方向的测量证实了这一点。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">Chen Ning Yang was born on September 22, 1922, in Hofei, Anwhei, China, the first of five children of Ke Chuan Yang and Meng Hwa Loh Yang.</p>
+          <p class="cn-herzh">官方自传开篇：1922 年 9 月 22 日生于中国安徽合肥。
+            <a href="https://www.nobelprize.org/prizes/physics/1957/yang/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for their penetrating investigation of the so-called parity laws which has led to important discoveries regarding the elementary particles</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">For a long time, physicists assumed that various symmetries characterized nature. In a kind of “mirror world” where right and left were reversed and matter was replaced by antimatter, the same physical laws would apply, they posited. The equality of these laws was questioned concerning the decay of certain elementary particles, however, and in 1956 Chen Ning Yang and Tsung Dao Lee formulated a theory that the left-right symmetry law is violated by the weak interaction. Measurements of electrons’ direction of motion during a cobalt isotope’s beta decay confirmed this.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/1957/yang/facts/" rel="noopener">nobelprize.org · Chen Ning Yang facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/1957/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/lee-1957.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="李政道官方肖像（Tsung-Dao Lee，nobelprize.org）">
+        <figcaption>Photo: Alan W. Richards, Princeton University. Nobel Foundation archive</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1957</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">李政道<span class="en">Tsung-Dao Lee</span></h3>
+        <p class="jp-aff">哥伦比亚大学（美国纽约）<span class="jp-affen">Columbia University, New York, NY, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/2 · 生于 Shanghai，中国</span></p>
+        <p class="jp-ach">物理学家原以为左右对称（宇称）对自然界的各种过程都适用——在左右互换、物质换成反物质的「镜像世界」中，物理规律应当一样。但某些基本粒子衰变的情形令这一前提受到质疑。1956 年，李政道与杨振宁提出理论：宇称在弱相互作用中被破坏；随后钴同位素 β 衰变中电子运动方向的测量证实了这一结论。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">Tsung-Dao (T.D.) Lee was born in Shanghai, China, on November 24, 1926, the third of six children of Tsing-Kong Lee and Ming-Chang Chang.</p>
+          <p class="cn-herzh">官方自传开篇：1926 年 11 月 24 日生于中国上海；另记其赴美深造是持「中国政府奖学金」（a Chinese government fellowship）。
+            <a href="https://www.nobelprize.org/prizes/physics/1957/lee/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for their penetrating investigation of the so-called parity laws which has led to important discoveries regarding the elementary particles</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">For a long time, physicists assumed that various symmetries characterized nature. In a kind of “mirror world” where right and left were reversed and matter was replaced by antimatter, the same physical laws would apply, they posited. The equality of these laws was questioned concerning the decay of certain elementary particles, however, in 1956 and Tsung-Dao Lee and Chen Ning Yang formulated a theory that the left-right symmetry law is violated by the weak interaction. Measurements of electrons’ direction of motion during a cobalt isotope’s beta decay confirmed this.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/1957/lee/facts/" rel="noopener">nobelprize.org · Tsung-Dao Lee facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/1957/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/ting-1976.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="丁肇中官方肖像（Samuel C.C. Ting，nobelprize.org）">
+        <figcaption>Photo from the Nobel Foundation archive.</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1976</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">丁肇中<span class="en">Samuel C.C. Ting</span></h3>
+        <p class="jp-aff">麻省理工学院（美国马萨诸塞州剑桥）<span class="jp-affen">Massachusetts Institute of Technology (MIT), Cambridge, MA, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/2 · 生于 Ann Arbor, MI，美国</span></p>
+        <p class="jp-ach">到 1970 年前后，已被识别的基本粒子数量已经很多，其中多数由两到三个夸克组成。1974 年，丁肇中与伯顿·里克特各自独立地利用高能粒子碰撞，发现了一种新的重粒子（即 J/psi 粒子），从实验上证明了第四种夸克的存在——这种夸克后来被命名为「粲」（charm）。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">My parents had hoped that I would be born in China, but as I was born prematurely while they were visiting the United States, by accident of birth I became an American citizen. Two months after my birth we returned to China.</p>
+          <p class="cn-herzh">官方自传自述：父母本希望他在中国出生；因父母访美期间早产，他「因出生这一偶然」成为美国公民，出生两个月后全家回到中国。他 1976 年的官方宴会演讲（以中文发表）亦有「Having grown up in the old China」一句。
+            <a href="https://www.nobelprize.org/prizes/physics/1976/ting/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for their pioneering work in the discovery of a heavy elementary particle of a new kind</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">By about 1970, a large number of elementary particles had been identified. Most of these comprised two or three quarks. In 1974, using high-energy particle collisions, Samuel Ting and Burton Richter, independently of each other, discovered a new heavy particle, known as J/psi, proving experimentally the existence of a fourth quark, later named “charm.”</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/1976/ting/facts/" rel="noopener">nobelprize.org · Samuel C.C. Ting facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/1976/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/lee-1986.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="李远哲官方肖像（Yuan T. Lee，nobelprize.org）">
+        <figcaption>Photo from the Nobel Foundation archive.</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1986</b><span class="jp-cat" style="color:var(--gold-deep)">化学</span></div>
+        <h3 class="jp-nm">李远哲<span class="en">Yuan T. Lee</span></h3>
+        <p class="jp-aff">加州大学伯克利分校（美国）<span class="jp-affen">University of California, Berkeley, CA, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/3 · 生于 Hsinchu，台湾</span></p>
+        <p class="jp-ach">由原子组成的分子相互碰撞、生成新化合物的化学反应，是自然界最基本的过程之一。1960 年代末，李远哲与达德利·赫施巴赫开始发展精细研究化学反应动力学的方法：让携带固定能量的分子束彼此交叉，在交会处发生反应；再通过测量生成分子的运动、质量与能量，把反应过程描绘出来。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">Yuan Tseh Lee was born on November 19, 1936 in Hsinchu, Taiwan.</p>
+          <p class="cn-herzh">官方自传开篇：1936 年 11 月 19 日生于台湾新竹（自传中并叙述战后「台湾归还中国」后恢复上学）。
+            <a href="https://www.nobelprize.org/prizes/chemistry/1986/lee/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for their contributions concerning the dynamics of chemical elementary processes</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">Chemical reactions in which molecules comprised of atoms collide and form new compounds represent one of nature’s fundamental processes. At the end of the 1960s Yuan Lee and Dudley Herschbach began developing methods to carefully study the dynamics of chemical reactions. Beams of molecules with fixed amounts of energy were made to cross one another so that chemical reactions arose where the beams intersected. By measuring the movement, mass and energy of the molecules produced, the reactions can be mapped.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/chemistry/1986/lee/facts/" rel="noopener">nobelprize.org · Yuan T. Lee facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/chemistry/1986/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/chu-1997.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="朱棣文官方肖像（Steven Chu，nobelprize.org）">
+        <figcaption>Photo from the Nobel Foundation archive.</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1997</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">朱棣文<span class="en">Steven Chu</span></h3>
+        <p class="jp-aff">斯坦福大学（美国加州）<span class="jp-affen">Stanford University, Stanford, CA, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/3 · 生于 St. Louis, MO，美国</span></p>
+        <p class="jp-ach">室温下空气中的原子与分子以极高速度运动，要研究它们就必须先让它们慢下来、冷下来。1980 年代，朱棣文与克洛德·科昂-塔努吉、威廉·菲利普斯各自发展了不同的方法：原子与携带固定能量的光粒子（光子）相遇时，运动状态会像被撞了一下那样改变；借助来自不同方向的激光，并针对多普勒效应调整光子能量，原子可以被冷却到极低的温度，并被「俘获」在陷阱中。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">Stephen Chu was born in St. Louis, Missouri, into an academic family of Chinese heritage.</p>
+          <p class="cn-herzh">官方 facts 页「Life」段原文：生于密苏里州圣路易斯，出身「一个具中国血统的学术家庭」（of Chinese heritage）。这是官方文本里最直接的一句。
+            <a href="https://www.nobelprize.org/prizes/physics/1997/chu/facts/" rel="noopener">出处：facts 页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for development of methods to cool and trap atoms with laser light</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">At room temperature atoms and molecules in the air move about at breakneck speed. In order for them to be studied, they need to be slowed down or chilled. During the 1980s Steven Chu, Claude Cohen-Tannoudji, and William Phillips developed different methods for this. When atoms come in contact with light particles with fixed energies, photons, their movement is affected as if they had been bumped. With the aid of laser light from different directions and adjustment of the photon’s energy for Doppler effects, the atoms can be cooled to extremely low temperatures and captured in a trap.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/1997/chu/facts/" rel="noopener">nobelprize.org · Steven Chu facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/1997/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/tsui-1998.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="崔琦官方肖像（Daniel C. Tsui，nobelprize.org）">
+        <figcaption>Photo from the Nobel Foundation archive.</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>1998</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">崔琦<span class="en">Daniel C. Tsui</span></h3>
+        <p class="jp-aff">普林斯顿大学（美国新泽西州）<span class="jp-affen">Princeton University, Princeton, NJ, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/3 · 生于 Henan，中国</span></p>
+        <p class="jp-ach">霍尔效应指的是：电流纵向通过一条金属带、磁场垂直作用于带面时，带内会斜向出现电荷。在某些材料的界面中会发生量子霍尔效应：冯·克利青发现，磁场的变化会使霍尔电导呈整数倍的台阶式变化；此后，崔琦与霍斯特·施特默在 1982 年发现，还存在呈分数倍台阶的变化。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">childhood years in a remote village in the province of Henan in central China, schooling years in Hong Kong</p>
+          <p class="cn-herzh">官方自传自述：童年在「中国中部河南省一个偏远村庄」，求学时期在香港。
+            <a href="https://www.nobelprize.org/prizes/physics/1998/tsui/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for their discovery of a new form of quantum fluid with fractionally charged excitations</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">The Hall effect refers to the fact that if an electrical current flows lengthwise through a metal band and a magnetic field is placed against the surface of the band at a right angle, a charge arises diagonally in the band. In interfaces in certain materials a quantum Hall effect occurs. Klaus von Klitzing discovered that changes in the magnetic field result in changes in what is known as Hall conductance that vary in steps of whole-number multiples of a constant. Subsequently, Daniel Tsui and Horst Störmer discovered in 1982 that there also are steps that represent fractions of the constant.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/1998/tsui/facts/" rel="noopener">nobelprize.org · Daniel C. Tsui facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/1998/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/tsien-2008.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="钱永健官方肖像（Roger Y. Tsien，nobelprize.org）">
+        <figcaption>© The Nobel Foundation. Photo: U. Montan</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>2008</b><span class="jp-cat" style="color:var(--gold-deep)">化学</span></div>
+        <h3 class="jp-nm">钱永健<span class="en">Roger Y. Tsien</span></h3>
+        <p class="jp-aff">加州大学圣迭戈分校；霍华德·休斯医学研究所（美国）<span class="jp-affen">University of California, San Diego, CA, USA; Howard Hughes Medical Institute, USA</span>
+          <span class="jp-place">获奖时 · 份额 1/3 · 生于 New York, NY，美国</span></p>
+        <p class="jp-ach">有些生物体会产生一种被称为绿色荧光蛋白（GFP）的物质，它会发出闪烁的光。GFP 的生成由一个基因调控，而这个基因可以被导入其他生物的基因组。由于 GFP 能借助基因工程与其他蛋白质连接，它已成为研究细胞内生物过程的重要工具。1990 年代，钱永健阐明了 GFP 如何发出这种闪烁的光，并成功改变了光的颜色，从而能够同时追踪不同的蛋白质与多个并行的生物过程。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">My father, Hsue Chu Tsien (1915–1997), came from the “scholar-gentry” class in Hangzhou, China</p>
+          <p class="cn-herzh">官方自传「Ancestors and family」段：父亲钱学榘出自中国杭州的「书香门第」，并解释 Tsien 即今多译作 Qian 的姓氏。
+            <a href="https://www.nobelprize.org/prizes/chemistry/2008/tsien/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for the discovery and development of the green fluorescent protein, GFP</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">Some organisms produce what has been named Green Fluorescent Protein (GFP), which emits a shimmering light. The formation of GFP is regulated by a gene that can be incorporated into the genomes of other organisms. Because GFP can be linked to other proteins thanks to genetic engineering, it has become an important tool for studying biological processes in cells. During the 1990s, Roger Y. Tsien elucidated how GFP produces its shimmering light and succeeded in varying the color of the light so that different proteins and multiple, simultaneous biological processes could be tracked.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/chemistry/2008/tsien/facts/" rel="noopener">nobelprize.org · Roger Y. Tsien facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/chemistry/2008/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/kao-2009.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="高锟官方肖像（Charles K. Kao，nobelprize.org）">
+        <figcaption>© The Nobel Foundation. Photo: U. Montan</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>2009</b><span class="jp-cat" style="color:var(--navy)">物理学</span></div>
+        <h3 class="jp-nm">高锟<span class="en">Charles K. Kao</span></h3>
+        <p class="jp-aff">标准电信实验室（英国哈洛）；香港中文大学<span class="jp-affen">Standard Telecommunication Laboratories, Harlow, United Kingdom; Chinese University of Hong Kong, Hong Kong, China</span>
+          <span class="jp-place">获奖时 · 份额 1/2 · 生于 Shanghai，中国</span></p>
+        <p class="jp-ach">信号能否远距离快速传输，是当代信息流动的基础。自 1930 年代起，玻璃制成的细丝（光纤）已被用来观察人体内部，但因为沿途光损耗太大，长期无法用于远距离的信息传输。1960 年代，高锟提出了解决方案：用极纯净的玻璃制成的纤维能够输送足够的光。与激光技术结合，他的方案使光纤通信成为可能。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">The Kao family comes from a township called Zhangyan in the Jinshan district near Shanghai, China</p>
+          <p class="cn-herzh">官方自传「Family Background」段：高家出自中国上海附近金山区的张堰镇。
+            <a href="https://www.nobelprize.org/prizes/physics/2009/kao/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for groundbreaking achievements concerning the transmission of light in fibers for optical communication</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">The rapid transmission of signals over long distances is fundamental to the flow of information in our time. Since the 1930s thin filaments, or fibers, of glass have been used to see inside the body, but these long remained unusable for long-distance information transfer because too much light was lost along the way. In the 1960s Charles Kao presented a solution: fibers of very pure glass transported sufficient light. Together with laser technology, his solution has made telecommunication using optical fibers possible.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/physics/2009/kao/facts/" rel="noopener">nobelprize.org · Charles K. Kao facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/physics/2009/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+<article class="jp-card cn-card">
+      <figure class="jp-ph">
+        <img src="assets/cn/tu-2015.webp" width="300" height="450" loading="lazy" decoding="async"
+             alt="屠呦呦官方肖像（Tu Youyou，nobelprize.org）">
+        <figcaption>© Nobel Media AB. Photo: A. Mahmoud</figcaption>
+      </figure>
+      <div class="jp-c">
+        <div class="jp-y"><b>2015</b><span class="jp-cat" style="color:var(--blue)">生理学或医学</span></div>
+        <h3 class="jp-nm">屠呦呦<span class="en">Tu Youyou</span></h3>
+        <p class="jp-aff">中国中医研究院（北京）<span class="jp-affen">China Academy of Traditional Chinese Medicine, Beijing, China</span>
+          <span class="jp-place">获奖时 · 份额 1/2 · 生于 Zhejiang Ningbo，中国</span></p>
+        <p class="jp-ach">多种严重的传染病由昆虫传播的寄生虫引起；疟疾由一种单细胞寄生虫引起，会造成严重的高烧。1970 年代，在研究了传统草药之后，屠呦呦把注意力集中在青蒿上，并成功提取出一种能够抑制疟原虫的物质——青蒿素。以青蒿素为基础的药物使无数人的生命得以挽救、健康状况得到改善。</p>
+        <div class="cn-her">
+          <span class="jp-lbl">为何在名单里 · 官方原文</span>
+          <p class="cn-heren">I was born on December 30, 1930 in Ningbo, a city on the east coast of China with a rich culture and over seven thousand years of history.</p>
+          <p class="cn-herzh">官方自传开篇：1930 年 12 月 30 日生于中国东部沿海城市宁波。
+            <a href="https://www.nobelprize.org/prizes/medicine/2015/tu/biographical/" rel="noopener">出处：官方自传页</a></p>
+        </div>
+        <p class="jp-mot"><span class="jp-lbl">官方获奖理由</span><span class="en">for her discoveries concerning a novel therapy against Malaria</span></p>
+        <details class="jp-en"><summary>看官方原文（facts 页 Work 段）<span class="en">the original wording</span></summary>
+          <p class="en">A number of serious infectious diseases are caused by parasites spread by insects. Malaria is caused by a single-cell parasite that causes severe fever. In the 1970s, after studies of traditional herbal medicines, Tu Youyou focused on sweet wormwood and managed to extract a substance, artemisinin, which inhibits the malaria parasite. Drugs based on artemisinin have led to the survival and improved health of millions of people.</p>
+          <p class="jp-srcline">来源：<a href="https://www.nobelprize.org/prizes/medicine/2015/tu/facts/" rel="noopener">nobelprize.org · Tu Youyou facts</a></p></details>
+        <p class="jp-links"><a href="https://www.nobelprize.org/prizes/medicine/2015/summary/" rel="noopener">诺贝尔奖官方页面<span class="en">nobelprize.org</span></a></p>
+      </div>
+    </article>
+    </div>
+  </section>
+
+  <section id="compare" style="margin-top:38px">
+    <h2 class="sec-label"><span class="lab">Born in China ≠ Chinese descent</span><span class="zh">口径对照 · 出生地在中国、但不是华裔的 3 位</span></h2>
+    <p class="lead">用第 ① 层的官方字段（出生地 = 中国）机械筛，会多出这 3 位。他们恰好说明为什么这一页不能只靠字段：<b>出生地 ≠ 族裔 ≠ 国籍</b>。</p>
+    <div class="cn-cmp"><div class="cn-cmpcard">
+          <h4>沃尔特·布拉顿 <span class="en" style="font-size:12.4px;color:var(--ink-3)">Walter H. Brattain</span></h4>
+          <p class="meta">1956 · 物理学 · 官方出生地：Amoy, China（厦门）</p>
+          <p class="q">“official facts page: Born: 10 February 1902, Amoy, China”</p>
+          <p class="zh">官方 facts 页记其出生地为中国厦门；官方 facts 与自传文本中均无以中国血统/家世为内容的陈述。 <a href="https://www.nobelprize.org/prizes/physics/1956/brattain/facts/" rel="noopener">官方页面</a></p>
+        </div><div class="cn-cmpcard">
+          <h4>埃德蒙·费舍尔 <span class="en" style="font-size:12.4px;color:var(--ink-3)">Edmond H. Fischer</span></h4>
+          <p class="meta">1992 · 生理学或医学 · 官方出生地：Shanghai, China（上海）</p>
+          <p class="q">“I was born in Shanghai, China on April 6, 1920. My father had come there from Vienna, Austria after earning doctorates in law and business. My mother, born Renée Tapernoux, had arrived from France with her parents via Hanoi.”</p>
+          <p class="zh">官方自传自述：生于中国上海，父亲由奥地利维也纳来华，母亲由法国经河内来华——家世与血统不在中国。 <a href="https://www.nobelprize.org/prizes/medicine/1992/fischer/biographical/" rel="noopener">官方页面</a></p>
+        </div><div class="cn-cmpcard">
+          <h4>根岸英一 <span class="en" style="font-size:12.4px;color:var(--ink-3)">Ei-ichi Negishi</span></h4>
+          <p class="meta">2010 · 化学 · 官方出生地：Changchun, China（长春）</p>
+          <p class="q">“I was born on July 14, 1935 in Changchun, China, as a Japanese citizen.”</p>
+          <p class="zh">官方自传自述：生于中国长春，「作为日本公民」（as a Japanese citizen）。他也是本馆日本科学奖页的对照案例。 <a href="https://www.nobelprize.org/prizes/chemistry/2010/negishi/biographical/" rel="noopener">官方页面</a></p>
+        </div></div>
+  </section>
+
+  <section id="observe" style="margin-top:38px">
+    <h2 class="sec-label"><span class="lab">Two observations</span><span class="zh">两个观察 · 数据能回答一半，另一半是观察</span></h2>
+    <div class="jp-q">
+      <h3>一、9 位里物理学占 6 位，为什么？</h3>
+      <p><b>数据能说的：</b>9 位里物理学 6 位（杨振宁、李政道、丁肇中、朱棣文、崔琦、高锟）、化学 2 位（李远哲、钱永健）、医学 1 位（屠呦呦）。</p>
+      <p><b>本页的观察（非诺贝尔委员会表述）：</b>这 6 位物理学的获奖年份（1957、1976、1997、1998、2009）与物理学的实验／理论范式更替期基本重合，而化学与医学的两位集中在 1980—2000 年代的实验方法学。样本只有 9 个，这样的分布不足以支撑「学科偏好」的结论。</p>
+      <p class="jp-obs">要检验这条观察，需要更大的分母（例如同期各学科华人研究者的总体规模）——本页没有，故只标注为观察。</p>
+    </div>
+    <div class="jp-q">
+      <h3>二、6 位生于中国、3 位生于美国——这个 6:3 说明什么？</h3>
+      <p><b>数据能说的：</b>9 位中 6 位的官方出生地在中国（含台湾新竹 1 位），3 位在美国出生（丁肇中、朱棣文、钱永健）。</p>
+      <p><b>本页的观察（非诺贝尔委员会表述）：</b>这 3 位的官方自传里，家世都指向二十世纪上半叶的中国（丁肇中父母本希望他在中国出生；朱棣文的官方 facts 写「of Chinese heritage」；钱永健自述父亲出自杭州书香门第），但他们受教育的年代与地点都已是美国。也就是说，这一栏 6:3 记录的是<b>家庭迁徙时点与受教育地的差别</b>，而不是「血统纯度」。</p>
+      <p class="jp-obs">以上是观察，不是结论。要把「迁徙时点」坐实，需要逐人比对家庭移民年份与其受教育阶段的对应关系——本页只引用了官方自传里已有的表述。</p>
+    </div>
+  </section>
+
+  <section id="srcs" class="srcs" style="margin-top:38px">
+    <h2 class="sec-label"><span class="lab">Sources</span><span class="zh">来源 · 这一页的每个数字从哪来</span></h2>
+    <ul class="list">
+      <li><b>名单、年份、奖项、出生地、官方获奖理由</b>：诺贝尔奖官方接口 <code>api.nobelprize.org/2.1/laureates</code>，2026-10-10 拉取（1,026 位全量落盘后筛选）。</li>
+      <li><b>份额、获奖时所属机构</b>：取自各人官方 facts 页的登记字段（<code>harvest_cn.py</code>），逐条与页面上的英文原文并列。</li>
+      <li><b>「为何在名单里」的官方原文</b>：nobelprize.org 的 facts 页 <span class="en">Life</span> 段或得主本人的官方自传页，逐字引用并附出处链接；<code>gate_cn.py</code> 机械核对每条引用确实出现在对应官方页面文本中。</li>
+      <li><b>中文成就介绍</b>：官方 facts 页 Work 段的中文转述（<code>achievements.json</code> 记录依据与官方链接）；中文里出现的每个数字都必须在官方英文原文里找到。</li>
+      <li><b>对照的 3 位</b>：官方 facts / 自传页原文（Brattain 出生地字段；Fischer、根岸英一的自传自述）。根岸英一同时出现在<a href="jp.html">日本科学奖页</a>的对照里——他是日本公民、生于中国长春。</li>
+      <li><b>肖像</b>：nobelprize.org 各位得主 facts 页的官方肖像原图，本地自托管，<b>仅等比缩放与转 WebP，不裁切、不加字</b>；每张下方保留官方署名行。官方摄权条款原文见<a href="index.html#srcs">主站「本馆说明 · 图片来源与授权」</a>：非商业用途、保留版权声明、不包含转授权。本页为非商业教育用途。</li>
+      <li><b>一件事说清</b>：本页<b>没有</b>引用任何非官方来源来判定「谁是华裔」；9 位的依据全部是官方文本（<code>gate_cn.py</code> 逐条核对）。</li>
+      <li>主站：<a href="index.html">2026 年诺贝尔奖 · 六个奖</a>（<span class="en">https://k286c7hg65-hub.github.io/nobel-2026/</span>）｜日本科学奖页：<a href="jp.html">jp.html</a>｜诺贝尔与基金会页：<a href="about.html">about.html</a></li>
+    </ul>
+  </section>
+
+  <footer style="margin:34px 0 60px">
+    <p class="jp-obs">本页数据 2026-10-10 拉取；口径：华裔（中国血统），不论出生地与国籍，共 9 位；官方数据不含国籍与族裔字段，逐人依据见卡片。</p>
+  </footer>
+</div>
+<button class="totop" id="totop" type="button" aria-label="回到顶部">↑</button>
+<script>
+(function () {
+  var top = document.getElementById('totop');
+  var nav = document.querySelector('nav.top');
+  var burger = document.querySelector('.burger');
+  var mnav = document.getElementById('mnav');
+  var scrim = document.getElementById('mscrim');
+  var prog = document.getElementById('progress');
+  function setNavh() {
+    if (nav) document.documentElement.style.setProperty('--navh', nav.offsetHeight + 'px');
+  }
+  function isOpen() { return mnav && !mnav.hasAttribute('hidden'); }
+  function openMenu() {
+    if (!mnav) return;
+    mnav.removeAttribute('hidden'); if (scrim) scrim.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+    mnav.querySelector('a').focus();
+  }
+  function closeMenu(refocus) {
+    if (!mnav || mnav.hasAttribute('hidden')) return;
+    mnav.setAttribute('hidden', ''); if (scrim) scrim.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    if (burger) { burger.setAttribute('aria-expanded', 'false'); if (refocus) burger.focus(); }
+  }
+  if (burger && mnav) {
+    burger.addEventListener('click', function () { isOpen() ? closeMenu(true) : openMenu(); });
+    if (scrim) scrim.addEventListener('click', function () { closeMenu(true); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && isOpen()) closeMenu(true); });
+    mnav.addEventListener('click', function (ev) {
+      var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      ev.preventDefault();
+      var id = a.getAttribute('href').slice(1);
+      closeMenu(false);
+      requestAnimationFrame(function () { var t = document.getElementById(id); if (t) t.scrollIntoView({ block: 'start' }); });
+    });
+    window.addEventListener('resize', function () { if (isOpen()) closeMenu(false); });
+  }
+  function onScroll() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var y = window.pageYOffset || h.scrollTop;
+    if (prog) prog.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+    if (top) top.classList.toggle('on', y > 900);
+  }
+  setNavh();
+  window.addEventListener('resize', setNavh);
+  window.addEventListener('load', setNavh);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+  if (top) top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>
